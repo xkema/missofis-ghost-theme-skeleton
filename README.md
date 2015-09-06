@@ -1,4 +1,4 @@
-Theme for Ghost Platform via Skeleton Framework
+Skeleton Theme for Ghost Platform
 ====
 
 [Ghost | Just a Blogging Platform](https://ghost.org/)
@@ -9,15 +9,8 @@ TODO
 
 * Robots.txt
 * Humans.txt
-* h5bp'e bakmayı unutma
+* h5bp
 * sitemap
 * http://blog.teamtreehouse.com/getting-started-with-handlebars-js
-* kendi bloguma tanıtım yazısı
 * responsive video?
 * `<!-- remove@production --><script src="//localhost:35729/livereload.js"></script><!-- endremove@production -->`
-*
-*
-*
-*
-*
-*
