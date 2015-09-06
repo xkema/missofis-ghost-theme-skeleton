@@ -1,0 +1,21 @@
+
+
+
+body {
+
+	/*font-family: 'Oxygen', sans-serif;*/
+	/*font-family: Georgia,Times,"Times New Roman",serif;*/
+	font-family: 'Lato', "Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*font-size: 18px;*/
+
+}
+
+
+
+img {
+
+	max-width: 100%;
+	height: auto;
+	display: block;
+
+}

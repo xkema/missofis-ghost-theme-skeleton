@@ -14,3 +14,10 @@ TODO
 * http://blog.teamtreehouse.com/getting-started-with-handlebars-js
 * kendi bloguma tanıtım yazısı
 * responsive video?
+* `<!-- remove@production --><script src="//localhost:35729/livereload.js"></script><!-- endremove@production -->`
+*
+*
+*
+*
+*
+*

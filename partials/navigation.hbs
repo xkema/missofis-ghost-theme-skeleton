@@ -1,1 +1,12 @@
-navigation.hbs
+{{! site navigation }}
+<div class="container site-navigation">
+	<div class="row">
+		<div class="one-half column">
+			<ul>
+				{{#foreach navigation}}
+					<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+				{{/foreach}}
+			</ul>
+		</div>
+	</div>
+</div>

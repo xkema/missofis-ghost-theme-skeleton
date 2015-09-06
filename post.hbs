@@ -1,1 +1,28 @@
-posts.hbs
+{{!< default}}
+
+{{! single post layout }}
+{{#post}}
+	<div class="container post-content">
+		<div class="row">
+			<div class="twelve columns">
+				{{! post content }}
+				<article class="{{post_class}}">
+					<header>
+						<h4>{{{title}}}</h4>
+					</header>
+					<section>
+						{{content}}
+					</section>
+					<footer>
+						{{author}}
+					</footer>
+				</article>
+			</div>
+		</div>
+	</div>
+{{/post}}
+
+
+	
+
+	

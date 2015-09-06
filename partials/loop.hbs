@@ -1,1 +1,18 @@
-loop.hbs
+{{! post loop }}
+{{#foreach posts}}
+	<div class="row">
+		<div class="twelve columns">
+			<article class="{{post_class}}">
+				<header>
+					<h4><a href="{{url}}">{{{title}}}</a></h4>
+				</header>
+				<section>
+					<p>{{excerpt words="32"}} <a href="{{url}}">&raquo;</a></p>
+				</section>
+				<footer>
+					{{author}}
+				</footer>
+			</article>
+		</div>
+	</div>
+{{/foreach}}

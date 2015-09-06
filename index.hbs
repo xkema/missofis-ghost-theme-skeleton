@@ -1,9 +1,15 @@
+{{!< default}}
 
-<h2>index.hbs</h2>
+{{! index page }}
+<div class="container site-content">
+	
+	{{! loop over blog posts }}
+	{{> "loop"}}
+	
+</div>
 
-{{#foreach posts}}
-	<h3>{{ title }}</h3>
-	<div>
-		{{ excerpt }}
-	</div>
-{{/foreach}}
+
+
+
+    
+
