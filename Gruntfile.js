@@ -9,7 +9,7 @@ module.exports = function( grunt ) {
 		// task :: @see https://github.com/gruntjs/grunt-contrib-watch#watch-task
 		watch: {
 			dev: {
-				files: [ '*.hbs', 'partials/*.hbs', 'assets/css/custom.css' ],
+				files: [ '*.hbs', 'partials/*.hbs', 'assets/**' ],
 				options: {
 					livereload: true
 				}
