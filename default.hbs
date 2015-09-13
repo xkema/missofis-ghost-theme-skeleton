@@ -9,18 +9,14 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {{! <link rel="apple-touch-icon" href="apple-touch-icon.png"> }}
-        <!-- Place favicon.ico in the root directory -->
-		
 		{{! skeleton styles }}
         <link rel="stylesheet" href="{{asset "css/skeleton/normalize.css"}}">
         <link rel="stylesheet" href="{{asset "css/skeleton/skeleton.css"}}">
         
 		{{! theme styles }}
         <link rel="stylesheet" href="{{asset "css/screen.css"}}">
-        <link rel="stylesheet" href="{{asset "css/custom.css"}}">
 
-        {{! theme fonts from google webfonts }}
+        {{! theme fonts from google webfonts and fontawesome }}
         {{> "webfonts"}}
 		
 		{{! make theme header hookable }}
@@ -42,6 +38,7 @@
 		{{ghost_foot}}
 		
 		{{! theme scripts }}
+		<script src="{{asset "js/vendor/zepto.min.js"}}"></script>
 		<script src="{{asset "js/main.js"}}"></script>
 
 		<!-- remove@production -->

@@ -7,6 +7,12 @@ Skeleton Theme for Ghost Platform
 TODO
 ----
 
+* remove skeleton overrides
+* json ld data author page, contact page, ..
+* it'a personal blog not millions of daily visit magazine
+* add an end marker to last paragraphs in posts (a square, bullet, ..?)
+* swipe events (zepto touch?)
+* publish forked and updated/customized version of theme
 * Robots.txt
 * Humans.txt
 * h5bp
@@ -14,3 +20,4 @@ TODO
 * http://blog.teamtreehouse.com/getting-started-with-handlebars-js
 * responsive video?
 * `<!-- remove@production --><script src="//localhost:35729/livereload.js"></script><!-- endremove@production -->`
+* toc module?

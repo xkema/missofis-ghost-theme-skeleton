@@ -1,25 +1,34 @@
 {{!< default}}
 
+
 {{! single post layout }}
 {{#post}}
-	<div class="container post-content">
-		<div class="row">
-			<div class="twelve columns">
-				{{! post content }}
-				<article class="{{post_class}}">
-					<header>
-						<h1>{{{title}}}</h1>
-					</header>
-					<section>
-						{{content}}
-					</section>
-					<footer>
-						{{author}}
-					</footer>
-				</article>
-			</div>
+{{! post header }}
+{{#if image}}
+<header class="post-header cover-holder">
+    <div class="post-cover">
+        <img src="{{image}}" alt="{{title}}" class="u-full-width">
+    </div>
+</header>
+{{/if}}
+{{! post content }}
+<div class="container post-content">
+	<div class="row">
+		<div class="twelve columns">
+			<article class="{{post_class}}">
+				<header>
+					<h1>{{title}}</h1>
+				</header>
+				<section>
+					{{content}}
+				</section>
+				<footer>
+					{{author}}
+				</footer>
+			</article>
 		</div>
 	</div>
+</div>
 {{/post}}
 
 

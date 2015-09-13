@@ -1,18 +1,21 @@
 {{! post loop }}
 {{#foreach posts}}
-	<div class="row">
-		<div class="twelve columns">
-			<article class="{{post_class}}">
-				<header>
-					<h1><a href="{{url}}">{{{title}}}</a></h1>
-				</header>
-				<section>
-					<p>{{excerpt words="32"}} <a href="{{url}}">&raquo;</a></p>
-				</section>
-				<footer>
-					{{author}}
-				</footer>
-			</article>
-		</div>
+<div class="row">
+	<div class="twelve columns">
+		<article class="{{post_class}} post-in-loop">
+			<header>
+				<h1 title="{{title}}">
+					<a href="{{url}}">{{{title}}}</a>
+				</h1>
+			</header>
+			<section>
+				<p>{{excerpt words="32"}} <a href="{{url}}" class="excerpt-link"><i class="fa fa-angle-double-right"></i></a></p>
+			</section>
+			<footer>
+				<i class="fa fa-user"></i> {{author}} &nbsp;&nbsp; <i class="fa fa-calendar"></i> {{date}}
+			</footer>
+		</article>
 	</div>
+</div>
+<hr>
 {{/foreach}}
