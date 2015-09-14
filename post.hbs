@@ -5,33 +5,58 @@
 {{#post}}
 {{! post header }}
 {{#if image}}
-<header class="post-header cover-holder">
+<header class="post-header cover-holder u-full-width">
     <div class="post-cover">
         <img src="{{image}}" alt="{{title}}" class="u-full-width">
     </div>
 </header>
+{{else}}
+<div class="container">
+	<div class="row">
+		<div class="twelve columns">
+			<span class="no-cover-placeholder">
+				<i class="fa fa-angle-down"></i>
+			</span>
+		</div>
+	</div>
+</div>
 {{/if}}
 {{! post content }}
 <div class="container post-content">
 	<div class="row">
 		<div class="twelve columns">
 			<article class="{{post_class}}">
-				<header>
+				<header class="post-header">
 					<h1>{{title}}</h1>
+	                <span class="post-date">
+	                	<i class="fa fa-calendar"></i>
+	                	<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+	                </span>
+	                {{#if tags}}
+	                &nbsp;
+	                <span class="post-tags">
+	                	<i class="fa fa-tags"></i>
+	                	{{tags}}
+	                </span>
+	                {{/if}}
 				</header>
-				<section>
+				<section class="post-content">
 					{{content}}
 				</section>
+				<hr>
+				<div class="post-share">
+					<h5>Share this post</h5>
+					<div>
+						li, fb, tw
+					</div>
+				</div>	
+				<hr>	
 				<footer>
 					{{author}}
 				</footer>
+				<hr>	
 			</article>
 		</div>
 	</div>
 </div>
 {{/post}}
-
-
-	
-
-	

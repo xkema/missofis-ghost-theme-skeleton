@@ -7,6 +7,11 @@ Skeleton Theme for Ghost Platform
 TODO
 ----
 
+* restrict page witdhs with containers
+* check layout containers they're all unsemantic :)
+* review reader attributes
+* review text/bg/hr colors for consistency
+* img title/alt attributes fill
 * remove skeleton overrides
 * json ld data author page, contact page, ..
 * it'a personal blog not millions of daily visit magazine

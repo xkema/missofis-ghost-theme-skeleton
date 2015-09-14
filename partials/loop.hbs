@@ -2,7 +2,7 @@
 {{#foreach posts}}
 <div class="row">
 	<div class="twelve columns">
-		<article class="{{post_class}} post-in-loop">
+		<article class="{{post_class}}">
 			<header>
 				<h1 title="{{title}}">
 					<a href="{{url}}">{{{title}}}</a>
@@ -19,3 +19,7 @@
 </div>
 <hr>
 {{/foreach}}
+
+{{! pagination partial }}
+{{pagination}}
+<hr>

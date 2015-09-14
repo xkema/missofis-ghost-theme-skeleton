@@ -1,1 +1,16 @@
-pagination.hbs
+{{! pagination }}
+<div class="row pagination" role="navigation">
+	<div class="twelve columns">
+	    {{#if prev}}
+        <a class="button u-pull-left" href="{{page_url prev}}"><i class="fa fa-arrow-left"></i><span class="visible-above-750">&nbsp;&nbsp;Newer Posts</span></a>
+        {{else}}
+		<span class="u-pull-left">&nbsp;</span> {{! print &nbsp; spans as column collapsing blocker }}
+	    {{/if}}			
+		<span class="pagination-page-indicator"><span class="visible-above-750">Page</span> {{page}} of {{pages}}</span>
+		{{#if next}}
+        <a class="button u-pull-right" href="{{page_url next}}"><span class="visible-above-750">Older Posts&nbsp;&nbsp;</span><i class="fa fa-arrow-right"></i></a>
+		{{else}}
+		<span class="u-pull-right">&nbsp;</span> {{! print &nbsp; spans as column collapsing blocker }}
+	    {{/if}}
+	</div>
+</div>
