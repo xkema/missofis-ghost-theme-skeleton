@@ -7,6 +7,8 @@ Skeleton Theme for Ghost Platform
 TODO
 ----
 
+* match loop post header paddings/linehiegs with index/paged/page contents corresponding headers & excerpts etc.
+* handle broken images
 * restrict page witdhs with containers
 * check layout containers they're all unsemantic :)
 * review reader attributes
@@ -26,3 +28,9 @@ TODO
 * responsive video?
 * `<!-- remove@production --><script src="//localhost:35729/livereload.js"></script><!-- endremove@production -->`
 * toc module?
+
+
+
+
+
+

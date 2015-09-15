@@ -1,24 +1,37 @@
 {{!< default}}
 
 {{! home page header }}
-<header class="site-header cover-holder u-full-width">
-    {{#if @blog.cover}}
-    <div class="blog-cover">
-        <img src="{{@blog.cover}}" alt="{{@blog.title}}" class="u-full-width">
-    </div>
-    {{/if}}
+<header class="site-section">
+
+	{{#is "paged"}}
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<span class="no-cover-placeholder">
+					<!-- <i class="fa fa-asterisk" title="Page {{pagination.page}} of {{pagination.pages}}"></i> -->
+					<i class="fa fa-paper-plane" title="Page {{pagination.page}} of {{pagination.pages}}"></i>
+					<span class="pagination-helper">page {{pagination.page}} of {{pagination.pages}}&nbsp;<i class="fa fa-paper-plane"></i>&nbsp;in&nbsp;<u><em>posts</em></u></span>
+				</span>
+			</div>
+		</div>
+	</div>
+	{{else}}
+	{{#if @blog.cover}}
+	<div class="cover-holder">
+        <img src="{{@blog.cover}}" alt="{{@blog.title}}" title="{{@blog.title}}" class="u-full-width">
+	</div>
+	{{/if}}
+	{{/is}}
 </header>
 
 {{! index page }}
-<div class="container loop-content">
-	
-	{{! loop over blog posts }}
-	{{> "loop" }}
-	
-</div>
+<main class="site-section post-content" role="main">
+	<div class="container loop-content">
+		
+		{{! loop over blog posts }}
+		{{> "loop" }}
+		
+	</div>
+</main>
 
-
-
-
-    
 

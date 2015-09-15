@@ -44,9 +44,10 @@
 
 	/* no cover image placeholder */
 	.no-cover-placeholder {
+		position: relative;
 		display: block;
 		padding: 4rem 0;
-		color: #aaaaaa;
+		/*color: #aaaaaa;*/
 		font-size: 4rem;
 	}
 
@@ -71,6 +72,7 @@
 	.post-share {
 		text-align: center;
 	}
+	.post-footer {}
 
 	/* typography */
 	blockquote {
@@ -82,11 +84,11 @@
 	}
 	blockquote::before {
 		content: "\f10d";
+		font-family: 'FontAwesome';
 		color: #dddddd;
 		position: absolute;
 		left: -5rem;
 		top: -1rem;
-		font-family: 'FontAwesome';
 		font-size: 3rem;
 	}
 
@@ -113,6 +115,17 @@
 	display: none;
 	border-radius: 4px;
 }
+/*
+.nav-current::before {
+	content: "\f069";
+	font-family: 'FontAwesome';
+	color: #555555;
+	position: absolute;
+	font-size: 0.5rem;
+	top: 1.25rem;
+	left: -0.25rem;
+}
+*/
 .nav-list > li {
 	display: block;
 	margin: 0;
@@ -154,7 +167,7 @@
 }
 
 /* headers */
-.site-header {}
+/*.site-header {}*/
 .post-header {}
 .page-header {}
 
@@ -165,6 +178,16 @@
 .pagination-page-indicator {
 	line-height: 38px; /*same as skeleton default buttons*/
 	color: #555555; /*same as skeleton default buttons*/
+}
+.pagination-helper {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #e1e1e1; /*same as navigation holder's border bottom*/
+	color: #ffffff;
+	font-size: 1.2rem;
+	display: block;
+	padding: 1px 4px;
 }
 
 /* site footer */

@@ -1,16 +1,18 @@
 {{! site navigation }}
-<div class="site-navigation-holder">
+<div class="site-section site-navigation-holder">
 	<div class="container">
-		<button type="button" class="nav-toggle btn-simplified"><i class="fa fa-fw fa-bars"></i>&nbsp;MENU</button>
 		<div class="row">
 			<div class="twelve columns">
-				<ul class="nav-site nav-list clearfix">
-					{{#foreach navigation}}
-					<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
-						<a href="{{url absolute="true"}}" class="button btn-simplified"><i class="fa fa-fw fa-caret-right"></i>&nbsp;{{label}}</a>
-					</li>
-					{{/foreach}}
-				</ul>
+				<nav>
+					<button type="button" class="nav-toggle btn-simplified"><i class="fa fa-fw fa-bars"></i>&nbsp;MENU</button>
+					<ul class="nav-site nav-list clearfix">
+						{{#foreach navigation}}
+						<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
+							<a href="{{url absolute="true"}}" class="button btn-simplified"><i class="fa fa-fw fa-caret-right"></i>&nbsp;{{label}}</a>
+						</li>
+						{{/foreach}}
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</div>

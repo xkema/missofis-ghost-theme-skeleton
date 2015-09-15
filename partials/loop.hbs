@@ -8,11 +8,11 @@
 					<a href="{{url}}">{{{title}}}</a>
 				</h1>
 			</header>
-			<section>
+			<section class="post-content post-excerpt">
 				<p>{{excerpt words="32"}} <a href="{{url}}" class="excerpt-link"><i class="fa fa-angle-double-right"></i></a></p>
 			</section>
 			<footer>
-				<i class="fa fa-user"></i> {{author}} &nbsp;&nbsp; <i class="fa fa-calendar"></i> {{date}}
+				<i class="fa fa-user"></i> {{author}} &nbsp;&nbsp; <i class="fa fa-calendar"></i> <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
 			</footer>
 		</article>
 	</div>
