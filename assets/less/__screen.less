@@ -1,0 +1,677 @@
+/*!
+	-----------------------------------------------
+	Missofis Ghost Skeleton Theme Styles
+	-----------------------------------------------
+ */
+
+
+
+/*
+	-----------------------------------------------
+	Variables
+	-----------------------------------------------
+*/
+
+	// colors
+	@color-font-main: #000000;
+	@color-hover-lightener: #333333;
+	@color-links: #1EAEDB;
+	@color-links-hover: #0FA0CE;
+	@color-heading-links: #000000;
+	@color-gray-light: #e1e1e1; // borders, <hr> elements
+	@color-gray-medium: #aaaaaa; // post meta
+	@color-gray-dark: #888888; // hover links for #aaaaaa
+
+	// main font styles override theese 2 style in case you use another web font with [theme-root]/partials/webfonts.hbs
+	@font-weight-normal: 400;
+	@font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	// fontawesome name
+	@font-awesome: "FontAwesome";
+
+	// navigation margnis/paddings
+	@nav-list-list-element-margin-right: 1.2rem;
+	@nav-list-link-padding-top-and-bottom: 1.6rem;
+
+	// .container width
+	@width-container-max: 960px;
+
+	// margin for site sections
+	@margin-template-content: 2.25rem;
+
+	// theme icons
+	@icon-home: "\f015";
+	@icon-page: "\f078";
+	@icon-post: "\f069";
+	@icon-tag: "\f02b";
+	@icon-author: "\f007";
+	@icon-header: "\f08d";
+
+
+
+/*
+	-----------------------------------------------
+	Skeleton Overrides
+	-----------------------------------------------
+*/
+
+	html {
+		
+		overflow-y: scroll;
+
+	}
+
+	body {
+
+		font-weight: @font-weight-normal;
+		font-family: @font-family;
+		color: @color-font-main;
+
+	}
+
+	a {
+
+		color: @color-links;
+
+		&:hover {
+
+			color: @color-links-hover;
+
+		}
+
+	}
+
+	hr {
+
+		border-color: @color-gray-light;
+
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		
+		font-weight: 600;
+		position: relative;
+
+		a {
+
+			color: @color-heading-links;
+			text-decoration: inherit;
+			font-weight: inherit;
+
+			&:hover {
+
+				color: lighten( @color-heading-links, 10% );
+
+			}
+
+		}
+
+	}
+
+	.container {
+
+		max-width: @width-container-max;
+
+	}
+
+/*
+	-----------------------------------------------
+	Theme Styles
+	-----------------------------------------------
+*/
+
+/* 	---------
+	Resetters
+	--------- */
+
+	// reset buttons
+	.reset-btn {
+		
+		margin: 0;
+		padding: 0;
+		border: none;
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: inherit;
+		text-transform: inherit;
+		height: auto;
+		color: inherit;
+		letter-spacing: normal;
+
+	}
+
+/*	----------
+	Navigation
+	---------- */
+
+	// main nav wrapper
+	.site-navigation {
+
+		border-bottom: 1px solid @color-gray-light;
+		
+		// navigation toggler button
+		.nav-toggle {
+
+			float: left;
+			margin: 0 @nav-list-list-element-margin-right 0 0;
+			padding: @nav-list-link-padding-top-and-bottom 0;
+
+		}
+
+		a {
+
+			padding: @nav-list-link-padding-top-and-bottom * 0.5 0;
+
+			&:hover {
+
+				color: @color-font-main + @color-hover-lightener;
+
+			}
+
+		}
+
+		.nav-list {
+
+			border-top: 1px dotted @color-gray-light;
+			padding: @nav-list-link-padding-top-and-bottom * 0.5 0;
+			display: none;
+
+		}
+
+	}
+
+	// inline navigation lists holders (site header)
+	.nav-list { // <ul> or <ol> element
+		
+		list-style: none;
+		margin: 0;
+		position: relative;
+		clear: both;
+
+		li {
+
+			display: block;
+			clear: both;
+			margin: 0;
+
+			&:last-child {
+
+				margin-right: 0;
+
+			}
+
+			a {
+
+				text-decoration: none;
+				color: inherit;
+				display: block;
+				white-space: nowrap;
+
+			}
+
+		}
+
+	}
+
+/* 	----------
+	Pagination
+	---------- */
+	
+	.pagination {
+
+		position: relative;
+		text-align: center;
+		
+		a {
+
+			display: block;
+			position: absolute;
+			top: 0;
+			
+			&.pagination-prev { left: 0; }
+			&.pagination-next { right: 0; }
+
+		}
+
+		.pagination-indicator {
+
+			height: 38px; // same as skeleton buttons
+			line-height: 38px;
+			color: @color-gray-medium;
+			// padding: 0 75px; // appr. width of button with icon (fix for element collapsing at devicess below 250px viewport size)
+
+		}
+
+
+	}
+
+
+/*	----------------
+	Horizontal Rules
+	---------------- */
+
+	hr {
+
+		&::after {
+
+			font-family: @font-awesome;
+			content: @icon-post;
+			position: absolute;
+			left: 50%;
+			margin-left: -11px;
+			color: @color-gray-light;
+			background: #ffffff;
+			margin-top: -12px;
+			padding: 0px 4px;
+			font-size: 14px;
+
+		}
+
+		&.author {
+
+			&::after {
+
+				// content: @icon-author;
+				content: @icon-header;
+
+			}
+
+		}
+
+		&.tag {
+
+			&::after {
+
+				content: @icon-tag;
+
+			}
+
+		}
+		
+	}
+
+/* 	-------------
+	Site Sections
+	------------- */
+
+	.template-content {
+
+		margin-top: @margin-template-content;
+
+	}
+
+	.site-footer {
+
+		margin-top: 5rem;
+		color: @color-gray-medium;
+		font-size: 1.2rem;
+		padding: 0 1rem;
+		text-align: center;
+
+		& > div {
+
+			width: 100%;
+
+		}
+
+		a {
+
+			color: inherit;
+			font-size: inherit;
+			text-decoration: none;
+
+			&:hover {
+
+				text-decoration: underline;
+				
+			}
+
+		}
+
+	}
+
+/* 	-----------
+	Post Styles
+	----------- */
+
+	.cover-holder {
+
+		max-height: 35vh; // below 550px
+		overflow: hidden;
+
+		& > img {
+
+			width: 100%;
+
+		}
+
+	}
+
+	.post {}
+	.post-header {}
+	.post-excerpt {}
+
+	// .post-meta, .author-meta, .tag-meta, ...
+	.meta-text {
+
+		color: @color-gray-medium;
+
+		a {
+
+			color: inherit;
+			text-decoration: none;
+
+			&:hover {
+
+				text-decoration: underline;
+
+			}
+
+		}
+
+	}
+
+	.post-content {
+		
+		// make post images responsive
+		img {
+
+			max-width: 100%;
+			height: auto;
+
+		}
+
+	}
+	
+	// post contents' titles
+	.meta-header {
+
+		.post-title {
+
+			margin-bottom: 0;
+
+		}
+
+		.post-meta {
+
+			margin-bottom: 2rem;
+
+		}
+
+	}
+
+
+	.post-footer {
+
+		// text-align: center;
+
+	}
+
+	.post-author,
+	.author-info {
+
+		h5 {
+
+			// reset margin
+			// margin-bottom: 0;
+
+		}
+
+		.author-meta {
+
+			// display: block;
+			// margin-bottom: 1rem;
+
+		}
+
+	}
+	
+	// in sub pages, author, tag, ...
+	.author-info,
+	.tag-info {
+
+		// text-align: center;
+
+	}
+
+	.info-box {
+
+		text-align: center;
+		// padding: @margin-template-content;
+		margin-top: @margin-template-content;
+		// border: 1px dashed @color-gray-light;
+
+		h3, h5 {
+
+			// reset header margin
+			margin-bottom: 0;
+
+		}
+
+		.meta-text {
+
+			display: block;
+			margin-bottom: 1rem;
+
+		}
+
+	}
+
+	.post-author-image {
+
+		height: auto;
+		color: @color-gray-medium;
+
+		img {
+
+			max-width: 100px;
+			display: inline-block;
+			border: 5px solid #ffffff;
+			.box-shadow-light;
+			border-radius: 50%;
+
+		}
+
+	}
+
+	.post-share {
+
+		.post-share-links {
+
+			a {
+
+				text-decoration: none;
+				color: @color-gray-medium;
+				display: inline-block;
+				margin: 0 2px;
+
+				&:hover {
+
+					color: @color-gray-dark;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.read-more {
+
+		color: @color-gray-medium;
+		text-decoration: none;
+
+		&:hover {
+			
+			color: inherit;
+
+		}
+
+	}
+	
+
+
+/*
+	-----------------------------------------------
+	User Styles
+	-----------------------------------------------
+*/
+
+
+
+
+
+/*
+	-----------------------------------------------
+	Utilities
+	-----------------------------------------------
+*/
+
+	/*
+	 * Clearfix: contain floats
+	 *
+	 * For modern browsers
+	 * 1. The space content is one way to avoid an Opera bug when the
+	 *    `contenteditable` attribute is included anywhere else in the document.
+	 *    Otherwise it causes space to appear at the top and bottom of elements
+	 *    that receive the `clearfix` class.
+	 * 2. The use of `table` rather than `block` is only necessary if using
+	 *    `:before` to contain the top-margins of child elements.
+	 */
+
+	.clearfix {
+
+		&:before,
+		&:after {
+
+			content: " "; /* 1 */
+			display: table; /* 2 */
+
+		}
+
+		&:after {
+			clear: both;
+		}
+
+	}
+
+
+
+/* 	-----------
+	Box Shadows
+	----------- */
+
+	.box-shadow-light {
+
+		box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.15 );
+
+	}
+ 
+/* 	------------------------------
+	Element Visibility Controllers
+	------------------------------ */
+
+	.visible-above-750 {
+
+		display: none;
+
+	}
+
+
+
+
+
+/*
+	-----------------------------------------------
+	Media Queries (copy of Skeleton queries)
+	-----------------------------------------------
+*/
+
+	/* Larger than mobile */
+	@media (min-width: 400px) {}
+
+	/* Larger than phablet (also point when grid becomes active) */
+	@media (min-width: 550px) {
+
+		.site-navigation {
+
+			.nav-toggle {
+
+				display: none;
+
+			}
+
+			a {
+
+				padding: @nav-list-link-padding-top-and-bottom 0;
+
+			}
+
+			.nav-list {
+
+				display: block;
+				border-top: none;
+				padding: 0;
+
+			}
+
+		}	
+
+		.nav-list {
+
+			clear: none;
+			float: left;
+
+			li {
+
+				clear: none;
+				margin: 0 @nav-list-list-element-margin-right 0 0;
+				float: left;
+				
+			}
+
+		}
+
+		.cover-holder {
+
+			max-height: 45vh;
+
+		}
+
+		.site-footer {
+
+			text-align: left;
+
+			& > div {
+
+				width: auto;
+
+			}
+
+		}
+
+	}
+
+	/* Larger than tablet */
+	@media (min-width: 750px) {
+
+		.cover-holder {
+
+			max-height: 65vh;
+
+		}
+
+		.visible-above-750 {
+
+			display: inline-block;
+			
+		}
+
+	}
+
+	/* Larger than desktop */
+	@media (min-width: 1000px) {}
+
+	/* Larger than Desktop HD */
+	@media (min-width: 1200px) {}

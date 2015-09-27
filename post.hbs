@@ -2,8 +2,10 @@
 
 {{! single post layout }}
 {{#post}}
-<header class="site-section">
-	{{! post header }}
+
+{{! post header }}
+{{!--
+<header class="">
 	{{#if image}}
 	<div class="cover-holder">
         <img src="{{image}}" alt="{{title}}" title="{{title}}" class="u-full-width">
@@ -13,9 +15,6 @@
 		<div class="row">
 			<div class="twelve columns">
 				<span class="no-cover-placeholder">
-					<!-- <i class="fa fa-chevron-down" title="{{title}}"></i> -->
-					<!-- <i class="fa fa-paper-plane" title="{{title}}"></i> -->
-					<!-- <i class="fa fa-angle-down" title="{{title}}"></i> -->
 					<i class="fa fa-asterisk" title="{{title}}"></i>
 				</span>
 			</div>
@@ -23,45 +22,76 @@
 	</div>
 	{{/if}}
 </header>
+--}}
 
-<main class="site-section post-content" role="main">
-	{{! post content }}
+
+
+
+
+
+
+{{! single post content }}
+<main class="u-full-width template-content" role="main">
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
 				<article class="{{post_class}}">
-					<header class="post-header">
-						<h1>{{title}}</h1>
-		                <span class="post-date">
-		                	<i class="fa fa-calendar"></i>
-		                	<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-		                </span>
-		                {{#if tags}}
-		                &nbsp;
-		                <span class="post-tags">
-		                	<i class="fa fa-tags"></i>
-		                	{{tags}}
-		                </span>
-		                {{/if}}
+					<header class="post-header meta-header">
+						<h1 class="post-title">{{{title}}}</h1>
+						<div class="post-meta meta-text">
+							<span><i class="fa fa-calendar"></i> <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time></span>
+							{{#if tags}}
+			                &nbsp;
+			                <span class="post-tags">
+			                	<i class="fa fa-tags"></i>
+			                	{{tags}}
+			                </span>
+			                {{/if}}
+			                </span>
+		               </div>
 					</header>
 					<section class="post-content">
 						{{content}}
 					</section>
-					<hr>
-					<div class="post-share">
-						<h5>Share this post</h5>
-						<div>
-							li, fb, tw
-						</div>
-					</div>	
-					<hr>	
 					<footer class="post-footer">
-						{{author}}
+						<div class="post-share">
+							<hr>
+							<h5>Share this post</h5>
+							<div class="post-share-links">
+								{{> "share" }}
+							</div>
+							<hr>
+						</div>
+						<div class="post-author info-box">
+							{{#author}}
+							<div class="post-author-image">
+								{{#if image}}
+								<img src="{{image}}" alt="{{name}}" class="u-full-width" title="{{name}}">
+								{{else}}
+								<i class="fa fa-user fa-5x" title="{{name}}"></i>
+								{{/if}}
+							</div>
+							<h5>{{name}}</h5>
+							<span class="author-meta meta-text">
+								{{#if location}}
+								<i class="fa fa-map-marker"></i> {{location}} &nbsp;
+								{{/if}}
+								<br>
+								{{#if website}}
+								<i class="fa fa-link"></i> <a href="{{website}}" target="_blank">{{website}}</a>
+								{{/if}}
+							</span>
+							{{#if bio}}
+							<p>{{bio}}</p>
+							{{/if}}
+							<a href="{{url}}" title="See all posts from {{name}}" class="button">Author Page</a>
+							{{/author}}
+						</div>
 					</footer>
-					<hr>	
 				</article>
 			</div>
-		</div>
+		</div>		
 	</div>
 </main>
+
 {{/post}}

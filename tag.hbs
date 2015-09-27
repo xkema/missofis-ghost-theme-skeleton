@@ -1,2 +1,86 @@
 {{!< default}}
-<h1>tag.hbs</h1>
+
+<div class="u-full-width">
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<section class="tag-info info-box">
+					{{#tag}}
+					<div class="post-author-image">
+						{{#if image}}
+						<img src="{{image}}" alt="{{name}}" class="u-full-width" title="{{name}}">
+						{{else}}
+						<i class="fa fa-tag fa-5x" title="{{name}}"></i>
+						{{/if}}
+					</div>
+					<h3>{{name}}</h3>
+					<span class="tag-meta meta-text">
+						<i class="fa fa-link"></i>&nbsp;<a href="{{url}}">{{name}}</a>
+					</span>
+					{{#if description}}
+					<p>{{description}}</p>
+					{{/if}}
+					{{/tag}}
+					<span class="tag-meta meta-text">
+						<i class="fa fa-file-text-o"></i> {{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}
+					</span>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr class="tag">
+
+{{! index page content }}
+<main class="u-full-width" role="main">
+	<div class="container">
+		
+		{{! loop over blog posts (rows comes from the loop) }}
+		{{> "loop" }}
+		
+	</div>
+</main>
+
+
+
+{{! tag page header }}
+{{!-- <header class="">
+	
+	{{#is "paged"}}
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<div class="no-cover-placeholder clearfix">
+					<div>
+						<i class="fa fa-tag"></i>{{#is "paged"}} <small>/{{pagination.page}}</small> {{/is}}
+					</div>
+					<div>
+						<span class="pagination-helper">page {{pagination.page}} of {{pagination.pages}} <i class="fa fa-tag"></i> in <u><em><strong>{{tag.name}}</strong></em></u> tag</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{else}}
+	{{#if tag.image}}
+	<div class="cover-holder {{#is "paged"}}paged{{/is}}" style="background-image:url({{tag.image}});"></div>
+	{{else}}
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<div class="no-cover-placeholder clearfix">
+					<div>
+						<i class="fa fa-tag"></i>{{#is "paged"}} <small>/{{pagination.page}}</small> {{/is}}
+					</div>
+					<div>
+						<span class="pagination-helper">page {{pagination.page}} of {{pagination.pages}} <i class="fa fa-tag"></i> in <u><em><strong>{{tag.name}}</strong></em></u> tag</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+	{{/is}}
+	
+</header> --}}

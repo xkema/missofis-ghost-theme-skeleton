@@ -1,18 +1,19 @@
-{{! post loop }}
+{{! the loop }}
+
 {{#foreach posts}}
 <div class="row">
 	<div class="twelve columns">
 		<article class="{{post_class}}">
-			<header>
-				<h1 title="{{title}}">
+			<header class="post-header">
+				<h1 class="post-title">
 					<a href="{{url}}">{{{title}}}</a>
 				</h1>
 			</header>
-			<section class="post-content post-excerpt">
-				<p>{{excerpt words="32"}} <a href="{{url}}" class="excerpt-link"><i class="fa fa-angle-double-right"></i></a></p>
+			<section class="post-excerpt">
+				<p>{{excerpt words="32"}} <a href="{{url}}" class="read-more" title="Read more.."><i class="fa fa-angle-double-right"></i></a></p>
 			</section>
-			<footer>
-				<i class="fa fa-user"></i> {{author}} &nbsp;&nbsp; <i class="fa fa-calendar"></i> <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+			<footer class="post-meta meta-text">
+				<i class="fa fa-user"></i> {{#author}}<a href="{{url}}" title="See all posts from {{name}}">{{name}}</a>{{/author}} &nbsp;&nbsp; <i class="fa fa-calendar"></i> <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
 			</footer>
 		</article>
 	</div>
@@ -22,4 +23,3 @@
 
 {{! pagination partial }}
 {{pagination}}
-<hr>

@@ -24,15 +24,20 @@
 	</head>
 	
 	<body class="{{body_class}}">
+	
+		{{! site wrapper }}
+		<div id="main-wrapper">
+			
+			{{! site navigation holder }}
+	        {{navigation}}
 
-		{{! site navigation holder }}
-        {{navigation}}
+			{{! inject post/page specific content here }}
+			{{{body}}}
 
-		{{! inject post/page specific content here }}
-		{{{body}}}
+			{{! theme footer }}
+			{{> "footer" }}
 
-		{{! theme footer }}
-		{{> "footer" }}
+		</div>
 	
 		{{! make theme footer hookable }}
 		{{ghost_foot}}

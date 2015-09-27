@@ -1,6 +1,18 @@
 // 
 Zepto( function( $ ) {
 
+	$( '.nav-toggle' ).on( 'click', function() {
+
+		// $( this ).siblings( '.nav-list' ).toggle();
+
+	} );
+
+	$( window ).on( 'resize', function() {
+
+		// $( '.nav-list' ).show();
+
+	} );
+
 	/*
 
 	// 

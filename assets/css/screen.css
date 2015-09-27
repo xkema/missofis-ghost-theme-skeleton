@@ -1,319 +1,353 @@
-/* ==========================================================================
-	 Skeleton Overrides
-	 ========================================================================== */
-
-	 /* generic */
-	 body {
-		/*override theese 2 style in case you use another web font with [theme-root]/partials/webfonts.hbs*/
-		/*font-weight: 400;*/
-		/*font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-		color: #000000;
-	}
-	/* typography */
-	h1, h2, h3, h4, h5, h6 {
-		font-weight: 600;
-	}
-	h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
-		color: inherit;
-		text-decoration: inherit;
-		font-weight: inherit;
-	}
-	h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover {
-		color: inherit;
-		opacity: 0.9;
-	}
-	/* grid */
-	.container {
-		max-width: 700px;
-	}
-	/* buttons */
-	.btn-simplified {
-		border: none;
-		margin: 0;
-		padding: 0;
-	height: auto;
-	line-height: 1;
-	}
-
-
-
-	/* ==========================================================================
-	   Components
-	   ========================================================================== */
-	
-
-	/* no cover image placeholder */
-	.no-cover-placeholder {
-		position: relative;
-		display: block;
-		padding: 4rem 0;
-		/*color: #aaaaaa;*/
-		font-size: 4rem;
-	}
-
-	/* post instance */
-	.post-header {
-		margin-bottom: 2rem;
-	}
-	.post-header h1 {
-		margin-bottom: 0; /* to stick with post date */
-	}
-	.post-header .post-date,
-	.post-header .post-tags {
-		color: #aaaaaa;
-	}
-	.post-content {}
-	.post-content p:last-child::after {
-		/*font-family: "FontAwesome";
-		content: " \f1d8";
-		padding-left: 0.5rem;
-		font-size: 1.4rem;*/
-	}
-	.post-share {
-		text-align: center;
-	}
-	.post-footer {}
-
-	/* typography */
-	blockquote {
-		position: relative;
-		padding-left: 2rem;
-		font-style: italic;
-		color: #666666;
-		border-left: 4px solid #dddddd;
-	}
-	blockquote::before {
-		content: "\f10d";
-		font-family: 'FontAwesome';
-		color: #dddddd;
-		position: absolute;
-		left: -5rem;
-		top: -1rem;
-		font-size: 3rem;
-	}
-
-
-/* ==========================================================================
-	 User Styles (think mobile-first)
-	 ========================================================================== */
-
-/* site navigation */
-/* site main navigation */
-.site-navigation-holder {
-	border-bottom: 1px solid #e1e1e1;
-}
-/* navigation menu toggler for mobile */
-.nav-toggle {
-	display: block;
-	margin: 0;
-	padding: 1.8rem 0;
-}
-/* navigation lists */
-.nav-list {
-	margin-bottom: 0;
-	list-style: none;
-	display: none;
-	border-radius: 4px;
-}
-/*
-.nav-current::before {
-	content: "\f069";
-	font-family: 'FontAwesome';
-	color: #555555;
-	position: absolute;
-	font-size: 0.5rem;
-	top: 1.25rem;
-	left: -0.25rem;
-}
-*/
-.nav-list > li {
-	display: block;
-	margin: 0;
-	float: right;
-	clear: both;
-	width: 100%;
-	border-bottom: 1px solid #e1e1e1;
-}
-.nav-list > li:last-child {
-	border-bottom: none;
-}
-.nav-list > li > a {
-	padding: 1.2rem 0;
-}
-.nav-list .fa {
-	display: inline-block;
-}
-/* loop content */
-.loop-content {}
-.loop-content .post footer {
-	color: #aaaaaa;
-}
-.loop-content .post a {
-	color: inherit;
-	text-decoration: inherit;
-}
-.loop-content .post footer a:hover {
-	text-decoration: underline;
-}
-.loop-content .post .excerpt-link {
-	color: #aaaaaa;
-}
-/* header covers */
-.cover-holder {
-	margin-bottom: 2rem;
-}
-.cover-holder img {
-	display: block;
-}
-
-/* headers */
-/*.site-header {}*/
-.post-header {}
-.page-header {}
-
-/* pagination */
-.pagination {
-	text-align: center;
-}
-.pagination-page-indicator {
-	line-height: 38px; /*same as skeleton default buttons*/
-	color: #555555; /*same as skeleton default buttons*/
-}
-.pagination-helper {
-	position: absolute;
-	right: 0;
-	top: 0;
-	background: #e1e1e1; /*same as navigation holder's border bottom*/
-	color: #ffffff;
-	font-size: 1.2rem;
-	display: block;
-	padding: 1px 4px;
-}
-
-/* site footer */
-.site-footer {
-	padding: 0 20px;
-	margin: 40px 0 10px;
-}
-
-
-/* ==========================================================================
-	 Utilities Extra
-	 ========================================================================== */
-
-
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
+/*!
+	-----------------------------------------------
+	Missofis Ghost Skeleton Theme Styles
+	-----------------------------------------------
  */
-
- .clearfix:before,
- .clearfix:after {
-	content: " "; /* 1 */
-	display: table; /* 2 */
-}
-
-.clearfix:after {
-	clear: both;
-}
-
-
-/* aligners for inline & inline-block elements center all at 100% width query */
-.u-align-left { text-align: center; }
-.u-align-center { text-align: center; }
-.u-align-right { text-align: center; }
-
-/* element visibility contollers */
-.visible-above-750 {
-	display: none;
-}
-
-
-
-/* ==========================================================================
-	 Queries (skeleton.css copy)
-	 ========================================================================== */
-
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
+	-----------------------------------------------
+	Variables
+	-----------------------------------------------
 */
-
-
-/* Larger than mobile */
-@media (min-width: 400px) {
+/*
+	-----------------------------------------------
+	Skeleton Overrides
+	-----------------------------------------------
+*/
+html {
+  overflow-y: scroll;
 }
-
+body {
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000000;
+}
+a {
+  color: #1eaedb;
+}
+a:hover {
+  color: #0fa0ce;
+}
+hr {
+  border-color: #e1e1e1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  position: relative;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #000000;
+  text-decoration: inherit;
+  font-weight: inherit;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: #1a1a1a;
+}
+.container {
+  max-width: 960px;
+}
+/*
+	-----------------------------------------------
+	Theme Styles
+	-----------------------------------------------
+*/
+/* 	---------
+	Resetters
+	--------- */
+.reset-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  height: auto;
+  color: inherit;
+  letter-spacing: normal;
+}
+/*	----------
+	Navigation
+	---------- */
+.site-navigation {
+  border-bottom: 1px solid #e1e1e1;
+}
+.site-navigation .nav-toggle {
+  float: left;
+  margin: 0 1.2rem 0 0;
+  padding: 1.6rem 0;
+}
+.site-navigation a {
+  padding: 0.8rem 0;
+}
+.site-navigation a:hover {
+  color: #333333;
+}
+.site-navigation .nav-list {
+  border-top: 1px dotted #e1e1e1;
+  padding: 0.8rem 0;
+  display: none;
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+  position: relative;
+  clear: both;
+}
+.nav-list li {
+  display: block;
+  clear: both;
+  margin: 0;
+}
+.nav-list li:last-child {
+  margin-right: 0;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  white-space: nowrap;
+}
+/* 	----------
+	Pagination
+	---------- */
+.pagination {
+  position: relative;
+  text-align: center;
+}
+.pagination a {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.pagination a.pagination-prev {
+  left: 0;
+}
+.pagination a.pagination-next {
+  right: 0;
+}
+.pagination .pagination-indicator {
+  height: 38px;
+  line-height: 38px;
+  color: #aaaaaa;
+}
+/*	----------------
+	Horizontal Rules
+	---------------- */
+hr::after {
+  font-family: "FontAwesome";
+  content: "\f069";
+  position: absolute;
+  left: 50%;
+  margin-left: -11px;
+  color: #e1e1e1;
+  background: #ffffff;
+  margin-top: -12px;
+  padding: 0px 4px;
+  font-size: 14px;
+}
+hr.author::after {
+  content: "\f08d";
+}
+hr.tag::after {
+  content: "\f02b";
+}
+/* 	-------------
+	Site Sections
+	------------- */
+.template-content {
+  margin-top: 2.25rem;
+}
+.site-footer {
+  margin-top: 5rem;
+  color: #aaaaaa;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+.site-footer > div {
+  width: 100%;
+}
+.site-footer a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+/* 	-----------
+	Post Styles
+	----------- */
+.cover-holder {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.cover-holder > img {
+  width: 100%;
+}
+.meta-text {
+  color: #aaaaaa;
+}
+.meta-text a {
+  color: inherit;
+  text-decoration: none;
+}
+.meta-text a:hover {
+  text-decoration: underline;
+}
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+.meta-header .post-title {
+  margin-bottom: 0;
+}
+.meta-header .post-meta {
+  margin-bottom: 2rem;
+}
+.info-box {
+  text-align: center;
+  margin-top: 2.25rem;
+}
+.info-box h3,
+.info-box h5 {
+  margin-bottom: 0;
+}
+.info-box .meta-text {
+  display: block;
+  margin-bottom: 1rem;
+}
+.post-author-image {
+  height: auto;
+  color: #aaaaaa;
+}
+.post-author-image img {
+  max-width: 100px;
+  display: inline-block;
+  border: 5px solid #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+}
+.post-share .post-share-links a {
+  text-decoration: none;
+  color: #aaaaaa;
+  display: inline-block;
+  margin: 0 2px;
+}
+.post-share .post-share-links a:hover {
+  color: #888888;
+}
+.read-more {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+.read-more:hover {
+  color: inherit;
+}
+/*
+	-----------------------------------------------
+	User Styles
+	-----------------------------------------------
+*/
+/*
+	-----------------------------------------------
+	Utilities
+	-----------------------------------------------
+*/
+/*
+	 * Clearfix: contain floats
+	 *
+	 * For modern browsers
+	 * 1. The space content is one way to avoid an Opera bug when the
+	 *    `contenteditable` attribute is included anywhere else in the document.
+	 *    Otherwise it causes space to appear at the top and bottom of elements
+	 *    that receive the `clearfix` class.
+	 * 2. The use of `table` rather than `block` is only necessary if using
+	 *    `:before` to contain the top-margins of child elements.
+	 */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/* 	-----------
+	Box Shadows
+	----------- */
+.box-shadow-light {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+}
+/* 	------------------------------
+	Element Visibility Controllers
+	------------------------------ */
+.visible-above-750 {
+  display: none;
+}
+/*
+	-----------------------------------------------
+	Media Queries (copy of Skeleton queries)
+	-----------------------------------------------
+*/
+/* Larger than mobile */
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-	/**/
-	.nav-toggle {
-		display: none;
-	}
-	.nav-list {
-		display: block;
-		border-radius: 0;
-		box-shadow: none;
-	}
-	.nav-list > li {
-		display: block;
-		float: left;
-		margin: 0 24px 0 0;
-		clear: none;
-		width: auto;
-		border-bottom: none;
-	}
-	.nav-list > li > a {
-		padding: 1.8rem 0;
-	}
-	.nav-list .fa {
-		display: none;
-	}
-	.nav-list > li:last-child {
-		margin-right: 0;
-	}
-	.no-cover-placeholder {
-		padding: 8rem 0;
-		font-size: 5rem; /* same as h1 in post */
-	}	
-	.u-align-left { text-align: left; }
-	.u-align-center { text-align: center; }
-	.u-align-right { text-align: right; }
+  .site-navigation .nav-toggle {
+    display: none;
+  }
+  .site-navigation a {
+    padding: 1.6rem 0;
+  }
+  .site-navigation .nav-list {
+    display: block;
+    border-top: none;
+    padding: 0;
+  }
+  .nav-list {
+    clear: none;
+    float: left;
+  }
+  .nav-list li {
+    clear: none;
+    margin: 0 1.2rem 0 0;
+    float: left;
+  }
+  .cover-holder {
+    max-height: 45vh;
+  }
+  .site-footer {
+    text-align: left;
+  }
+  .site-footer > div {
+    width: auto;
+  }
 }
-
 /* Larger than tablet */
 @media (min-width: 750px) {
-	.visible-above-750 {
-		display: inline-block;
-	}
+  .cover-holder {
+    max-height: 65vh;
+  }
+  .visible-above-750 {
+    display: inline-block;
+  }
 }
-
 /* Larger than desktop */
-@media (min-width: 1000px) {}
-
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
-
-
-
-
-
-
-
-
-
-
-
-

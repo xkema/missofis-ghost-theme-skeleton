@@ -1,37 +1,72 @@
 {{!< default}}
 
-{{! home page header }}
-<header class="site-section">
 
-	{{#is "paged"}}
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<span class="no-cover-placeholder">
-					<!-- <i class="fa fa-asterisk" title="Page {{pagination.page}} of {{pagination.pages}}"></i> -->
-					<i class="fa fa-paper-plane" title="Page {{pagination.page}} of {{pagination.pages}}"></i>
-					<span class="pagination-helper">page {{pagination.page}} of {{pagination.pages}}&nbsp;<i class="fa fa-paper-plane"></i>&nbsp;in&nbsp;<u><em>posts</em></u></span>
-				</span>
-			</div>
-		</div>
-	</div>
-	{{else}}
-	{{#if @blog.cover}}
+<div class="u-full-width">
 	<div class="cover-holder">
-        <img src="{{@blog.cover}}" alt="{{@blog.title}}" title="{{@blog.title}}" class="u-full-width">
+		{{#if @blog.cover}}
+		<img src="{{@blog.cover}}" alt="{{@blog.title}}">
+		{{/if}}
 	</div>
-	{{/if}}
-	{{/is}}
-</header>
+</div>
 
-{{! index page }}
-<main class="site-section post-content" role="main">
-	<div class="container loop-content">
+{{! index page content }}
+<main class="u-full-width template-content" role="main">
+	<div class="container">
 		
-		{{! loop over blog posts }}
+		{{! loop over blog posts (rows comes from the loop) }}
 		{{> "loop" }}
 		
 	</div>
 </main>
 
 
+
+
+
+
+
+
+
+{{!--
+{{! home page header }}
+<header class="">
+	
+	{{#is "paged"}}
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<div class="no-cover-placeholder clearfix">
+					<div>
+						<i class="fa fa-home"></i>{{#is "paged"}} <small>/{{pagination.page}}</small> {{/is}}
+					</div>
+					<div>
+						<span class="pagination-helper">page {{pagination.page}} of {{pagination.pages}} <i class="fa fa-home"></i> in <u><em>posts</em></u></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{else}}
+	{{#if @blog.cover}}
+	<div class="cover-holder {{#is "paged"}}paged{{/is}}" style="background-image:url({{@blog.cover}});"></div>
+	{{else}}
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<div class="no-cover-placeholder clearfix">
+					<div>
+						<i class="fa fa-home"></i>{{#is "paged"}} <small>/{{pagination.page}}</small> {{/is}}
+					</div>
+					<div>
+						<span class="pagination-helper">page {{pagination.page}} of {{pagination.pages}} <i class="fa fa-home"></i> in <u><em>posts</em></u></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+	{{/is}}
+	
+	
+</header>
+--}}

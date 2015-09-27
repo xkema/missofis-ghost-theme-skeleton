@@ -1,2 +1,49 @@
 {{!< default}}
-<h1>author.hbs</h1>
+
+<div class="u-full-width">
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<section class="author-info info-box">
+					{{#author}}
+					<div class="post-author-image">
+						{{#if image}}
+						<img src="{{image}}" alt="{{name}}" class="u-full-width" title="{{name}}">
+						{{else}}
+						<i class="fa fa-user fa-5x" title="{{name}}"></i>
+						{{/if}}
+					</div>
+					<h3>{{name}}</h3>
+					<span class="author-meta meta-text">
+						{{#if location}}
+						<i class="fa fa-map-marker"></i> {{location}} &nbsp;
+						{{/if}}
+						<br>
+						{{#if website}}
+						<i class="fa fa-link"></i>&nbsp;<a href="{{website}}" target="_blank">{{website}}</a>
+						{{/if}}
+					</span>
+					{{#if bio}}
+					<p>{{bio}}</p>
+					{{/if}}
+					{{/author}}
+					<span class="author-meta meta-text">
+						<i class="fa fa-file-text-o"></i> {{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}
+					</span>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr class="author">
+
+{{! index page content }}
+<main class="u-full-width template-content" role="main">
+	<div class="container">
+		
+		{{! loop over blog posts (rows comes from the loop) }}
+		{{> "loop" }}
+		
+	</div>
+</main>
