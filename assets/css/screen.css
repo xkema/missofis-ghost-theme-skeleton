@@ -200,6 +200,12 @@ hr.tag::after {
 .cover-holder > img {
   width: 100%;
 }
+.cover-holder-iconed {
+  position: relative;
+  display: block;
+  padding: 4rem 0 1.75rem;
+  font-size: 4rem;
+}
 .meta-text {
   color: #aaaaaa;
 }
@@ -232,6 +238,10 @@ hr.tag::after {
   display: block;
   margin-bottom: 1rem;
 }
+.info-box-type-icon {
+  color: #aaaaaa;
+  padding: 1rem 0 2.25rem;
+}
 .post-author-image {
   height: auto;
   color: #aaaaaa;
@@ -242,6 +252,9 @@ hr.tag::after {
   border: 5px solid #ffffff;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   border-radius: 50%;
+}
+.post-share {
+  text-align: center;
 }
 .post-share .post-share-links a {
   text-decoration: none;
@@ -333,6 +346,11 @@ hr.tag::after {
   .cover-holder {
     max-height: 45vh;
   }
+  .cover-holder-iconed {
+    padding: 8rem 0 5.75rem;
+    font-size: 5rem;
+    /* same as h1 in post */
+  }
   .site-footer {
     text-align: left;
   }
@@ -343,7 +361,7 @@ hr.tag::after {
 /* Larger than tablet */
 @media (min-width: 750px) {
   .cover-holder {
-    max-height: 65vh;
+    max-height: 60vh;
   }
   .visible-above-750 {
     display: inline-block;

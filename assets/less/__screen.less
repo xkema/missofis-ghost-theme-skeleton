@@ -35,6 +35,7 @@
 
 	// .container width
 	@width-container-max: 960px;
+	// @width-container-max: 700px;
 
 	// margin for site sections
 	@margin-template-content: 2.25rem;
@@ -82,7 +83,7 @@
 	}
 
 	hr {
-
+		
 		border-color: @color-gray-light;
 
 	}
@@ -347,6 +348,16 @@
 
 	}
 
+	.cover-holder-iconed {
+
+		position: relative;
+		display: block;
+		padding: 4rem 0 1.75rem;
+		// color: @color-gray-light;
+		font-size: 4rem;
+
+	}
+
 	.post {}
 	.post-header {}
 	.post-excerpt {}
@@ -457,6 +468,13 @@
 
 	}
 
+	.info-box-type-icon {
+
+		color: @color-gray-medium;
+		padding: 1rem 0 2.25rem;
+
+	}
+
 	.post-author-image {
 
 		height: auto;
@@ -473,8 +491,15 @@
 		}
 
 	}
+	
+	// post & page featured headers
+	.post-featured-header {
+
+	}
 
 	.post-share {
+
+		text-align: center;
 
 		.post-share-links {
 
@@ -635,7 +660,14 @@
 
 		.cover-holder {
 
-			max-height: 45vh;
+			max-height: 45vh; // above 550px
+
+		}
+
+		.cover-holder-iconed {
+
+			padding: 8rem 0 5.75rem;
+			font-size: 5rem; /* same as h1 in post */
 
 		}
 
@@ -658,7 +690,7 @@
 
 		.cover-holder {
 
-			max-height: 65vh;
+			max-height: 60vh; // above 750px
 
 		}
 

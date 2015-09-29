@@ -3,18 +3,17 @@
 {{! single post layout }}
 {{#post}}
 
-{{! post header }}
-{{!--
-<header class="">
+{{! post featured header }}
+<header class="u-full-width post-featured-header">
 	{{#if image}}
 	<div class="cover-holder">
-        <img src="{{image}}" alt="{{title}}" title="{{title}}" class="u-full-width">
+		<img src="{{image}}" alt="{{image}}">
 	</div>
 	{{else}}
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
-				<span class="no-cover-placeholder">
+				<span class="cover-holder-iconed">
 					<i class="fa fa-asterisk" title="{{title}}"></i>
 				</span>
 			</div>
@@ -22,13 +21,6 @@
 	</div>
 	{{/if}}
 </header>
---}}
-
-
-
-
-
-
 
 {{! single post content }}
 <main class="u-full-width template-content" role="main">
@@ -84,7 +76,7 @@
 							{{#if bio}}
 							<p>{{bio}}</p>
 							{{/if}}
-							<a href="{{url}}" title="See all posts from {{name}}" class="button">Author Page</a>
+							<a href="{{url}}" title="See all posts from {{name}}" class="button">Author's Page</a>
 							{{/author}}
 						</div>
 					</footer>

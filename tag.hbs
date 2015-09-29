@@ -1,17 +1,20 @@
 {{!< default}}
 
 <div class="u-full-width">
+	{{#if tag.image}}
+	<div class="u-full-width">
+		<div class="cover-holder">
+			<img src="{{tag.image}}" alt="{{tag.image}}">
+		</div>
+	</div>
+	{{/if}}
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
 				<section class="tag-info info-box">
 					{{#tag}}
-					<div class="post-author-image">
-						{{#if image}}
-						<img src="{{image}}" alt="{{name}}" class="u-full-width" title="{{name}}">
-						{{else}}
+					<div class="info-box-type-icon">
 						<i class="fa fa-tag fa-5x" title="{{name}}"></i>
-						{{/if}}
 					</div>
 					<h3>{{name}}</h3>
 					<span class="tag-meta meta-text">
