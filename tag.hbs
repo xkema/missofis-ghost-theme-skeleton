@@ -1,6 +1,8 @@
 {{!< default}}
 
+{{! tag header }}
 <div class="u-full-width">
+	{{^is "paged"}}
 	{{#if tag.image}}
 	<div class="u-full-width">
 		<div class="cover-holder">
@@ -8,6 +10,7 @@
 		</div>
 	</div>
 	{{/if}}
+	{{/is}}
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
@@ -34,6 +37,21 @@
 </div>
 
 <hr class="tag">
+
+{{! pagination helper tag }}
+{{#is "paged"}}
+<div class="u-full-width">
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<span class="pagination-helper-top u-pull-right">
+					<i class="fa fa-tag"></i> <small>/ page {{pagination.page}} of {{pagination.pages}}</small>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+{{/is}}
 
 {{! index page content }}
 <main class="u-full-width" role="main">

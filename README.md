@@ -9,6 +9,8 @@ Skeleton Theme for Ghost Platform
 TODO
 ----
 
+* Hero image aspect ratio optimization
+* Analytics scripts info
 * IE 9 partially supported? 
 * Base theme is migratable, extension are not!
 * extensions as ghost_head/ghost_foot?

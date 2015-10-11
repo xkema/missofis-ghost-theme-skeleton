@@ -1,13 +1,40 @@
 {{!< default}}
 
 {{! index page header }}
-<div class="u-full-width">
+{{^is "paged"}}
+<header class="u-full-width home-header">
+	{{#if @blog.cover}}
 	<div class="cover-holder">
-		{{#if @blog.cover}}
 		<img src="{{@blog.cover}}" alt="{{@blog.title}}">
-		{{/if}}
 	</div>
-</div>
+	{{/if}}
+</header>
+{{else}}
+<header class="u-full-width home-header">
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<span class="cover-holder-iconed">
+					<i class="fa fa-home" title="{{title}}"></i>
+					<span class="pagination-helper-top home-helper">/ page {{pagination.page}} of {{pagination.pages}}</span>
+				</span>
+			</div>
+		</div>
+	</div>
+</header>
+{{! pagination helper home }}
+{{!-- <div class="u-full-width">
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<span class="pagination-helper-top u-pull-right">
+					<i class="fa fa-home"></i> <small>/ page {{pagination.page}} of {{pagination.pages}}</small>
+				</span>
+			</div>
+		</div>
+	</div>
+</div> --}}
+{{/is}}
 
 {{! index page content }}
 <main class="u-full-width template-content" role="main">
@@ -18,55 +45,3 @@
 		
 	</div>
 </main>
-
-
-
-
-
-
-
-
-
-{{!--
-{{! home page header }}
-<header class="">
-	
-	{{#is "paged"}}
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<div class="no-cover-placeholder clearfix">
-					<div>
-						<i class="fa fa-home"></i>{{#is "paged"}} <small>/{{pagination.page}}</small> {{/is}}
-					</div>
-					<div>
-						<span class="pagination-helper">page {{pagination.page}} of {{pagination.pages}} <i class="fa fa-home"></i> in <u><em>posts</em></u></span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	{{else}}
-	{{#if @blog.cover}}
-	<div class="cover-holder {{#is "paged"}}paged{{/is}}" style="background-image:url({{@blog.cover}});"></div>
-	{{else}}
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<div class="no-cover-placeholder clearfix">
-					<div>
-						<i class="fa fa-home"></i>{{#is "paged"}} <small>/{{pagination.page}}</small> {{/is}}
-					</div>
-					<div>
-						<span class="pagination-helper">page {{pagination.page}} of {{pagination.pages}} <i class="fa fa-home"></i> in <u><em>posts</em></u></span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	{{/if}}
-	{{/is}}
-	
-	
-</header>
---}}
