@@ -7,6 +7,16 @@
 	<div class="cover-holder">
 		<img src="{{@blog.cover}}" alt="{{@blog.title}}">
 	</div>
+	{{else}}
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<span class="cover-holder-iconed">
+					<i class="fa fa-home" title="{{title}}"></i>
+				</span>
+			</div>
+		</div>
+	</div>
 	{{/if}}
 </header>
 {{else}}
@@ -22,18 +32,6 @@
 		</div>
 	</div>
 </header>
-{{! pagination helper home }}
-{{!-- <div class="u-full-width">
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<span class="pagination-helper-top u-pull-right">
-					<i class="fa fa-home"></i> <small>/ page {{pagination.page}} of {{pagination.pages}}</small>
-				</span>
-			</div>
-		</div>
-	</div>
-</div> --}}
 {{/is}}
 
 {{! index page content }}
