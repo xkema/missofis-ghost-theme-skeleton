@@ -9,6 +9,7 @@ Skeleton Theme for Ghost Platform
 TODO
 ----
 
+* Add text to social media icons
 * Hero image aspect ratio optimization
 * Analytics scripts info
 * IE 9 partially supported? 
