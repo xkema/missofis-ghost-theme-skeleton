@@ -10,11 +10,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 		{{! skeleton styles }}
-        <link rel="stylesheet" href="{{asset "css/skeleton/normalize.css"}}">
-        <link rel="stylesheet" href="{{asset "css/skeleton/skeleton.css"}}">
+        <link rel="stylesheet" href="../bower_components/skeleton/css/normalize.css">
+        <link rel="stylesheet" href="../bower_components/skeleton/css/skeleton.css">
         
 		{{! theme styles }}
-        <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+        <link rel="stylesheet" href="{{asset "styles/css/main.css"}}">
 
         {{! theme fonts from google webfonts and fontawesome }}
         {{> "webfonts"}}
@@ -43,8 +43,7 @@
 		{{ghost_foot}}
 		
 		{{! theme scripts }}
-		<script src="{{asset "js/vendor/zepto.min.js"}}"></script>
-		<script src="{{asset "js/main.js"}}"></script>
+		<script src="{{asset "scripts/main.js"}}"></script>
 
 		<!-- remove@production -->
 		<script src="//localhost:35729/livereload.js"></script>

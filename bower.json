@@ -1,0 +1,22 @@
+{
+  "name": "missofis-skeleton-ghost-theme",
+  "description": "",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Kemal Yılmaz <kemalxyz@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "https://github.com/xkema/missofis-skeleton-ghost-theme",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "skeleton-css#^2.0.4"
+  }
+}

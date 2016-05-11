@@ -2,7 +2,7 @@ module.exports = function( grunt ) {
 
 	// load tasks
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-contrib-less' );
+	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 
 	// initialize grunt modules 
 	grunt.initConfig( {
@@ -15,9 +15,9 @@ module.exports = function( grunt ) {
 					livereload: true
 				}
 			},
-			less: {
-				files: [ 'assets/less/__screen.less' ],
-				tasks: [ 'less' ]
+			sass: {
+				files: [ 'assets/styles/scss/*.scss' ],
+				tasks: [ 'sass' ]
 			},
 			configFiles: {
 				files: 'Gruntfile.js',
@@ -25,18 +25,23 @@ module.exports = function( grunt ) {
 					reload: true
 				}
 			}
-		},
-		// task :: @see https://www.npmjs.com/package/grunt-contrib-less
-		less: {
+		}
+		// task :: @see https://www.npmjs.com/package/grunt-contrib-sass
+		,sass: {
 			dev: {
-				files: { 'assets/css/screen.css': 'assets/less/__screen.less' }
+				options: {
+					style: 'expanded'
+				},
+				files: {
+					'assets/styles/css/main.css': 'assets/styles/scss/main.scss'
+				}
 			}
 		}
 
 	} );
 
 	// register custom task for ***
-	grunt.registerTask( 'default', [ 'watch' ] );
+	grunt.registerTask( 'default', [ 'sass', 'watch' ] );
 
 	// register theme builder  task
 	//grunt.registerTask( 'build', [ 'jshint', 'uglify' ] );
