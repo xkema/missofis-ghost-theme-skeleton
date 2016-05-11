@@ -3,6 +3,7 @@ module.exports = function( grunt ) {
 	// load tasks
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
+	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 
 	// initialize grunt modules 
 	grunt.initConfig( {
@@ -10,7 +11,11 @@ module.exports = function( grunt ) {
 		// task :: @see https://github.com/gruntjs/grunt-contrib-watch#watch-task
 		watch: {
 			dev: {
-				files: [ '*.hbs', 'partials/*.hbs', 'assets/css/**', 'assets/js/**', 'assets/images/**', 'assets/fonts/**' ],
+				files: [ 
+					'*.hbs', 'partials/*.hbs',
+					'assets/styles/css/*.css', 'assets/styles/skeleton/*.css',
+					'assets/scripts/*.js',
+				],
 				options: {
 					livereload: true
 				}
@@ -37,11 +42,26 @@ module.exports = function( grunt ) {
 				}
 			}
 		}
+		// task :: @see https://www.npmjs.com/package/grunt-contrib-copy#getting-started
+		,copy: {
+			dev: {
+				files: [
+					{
+						expand: true,
+						cwd: 'bower_components/skeleton/css/',
+						src: [ '*.css' ],
+						dest: 'assets/styles/skeleton/',
+						filter: 'isFile',
+						flatten: true
+					}
+				]
+			}
+		}
 
 	} );
 
 	// register custom task for ***
-	grunt.registerTask( 'default', [ 'sass', 'watch' ] );
+	grunt.registerTask( 'default', [ 'copy:dev', 'sass', 'watch' ] );
 
 	// register theme builder  task
 	//grunt.registerTask( 'build', [ 'jshint', 'uglify' ] );
