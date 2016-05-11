@@ -7,20 +7,23 @@
 		<title>{{meta_title}}</title>
 		<meta name="description" content="{{meta_description}}">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		{{! skeleton styles }}
-        <link rel="stylesheet" href="{{asset "styles/skeleton/normalize.css"}}">
-        <link rel="stylesheet" href="{{asset "styles/skeleton/skeleton.css"}}">
-        
+		<link rel="stylesheet" href="{{asset "styles/skeleton/normalize.css"}}">
+		<link rel="stylesheet" href="{{asset "styles/skeleton/skeleton.css"}}">
+		
 		{{! theme styles }}
-        <link rel="stylesheet" href="{{asset "styles/css/main.css"}}">
+		<link rel="stylesheet" href="{{asset "styles/css/main.css"}}">
 
-        {{! theme fonts from google webfonts and fontawesome }}
-        {{> "webfonts"}}
+		{{! theme fonts from google webfonts and fontawesome }}
+		{{> "webfonts"}}
+
+		{{! import fontawesome icons }}
+		{{> "fonticons"}}
 		
 		{{! make theme header hookable }}
-        {{ghost_head}}
+		{{ghost_head}}
 	</head>
 	
 	<body class="{{body_class}}">
@@ -29,7 +32,7 @@
 		<div id="main-wrapper">
 			
 			{{! site navigation holder }}
-	        {{navigation}}
+			{{navigation}}
 
 			{{! inject post/page specific content here }}
 			{{{body}}}

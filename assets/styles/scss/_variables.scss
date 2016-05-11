@@ -1,0 +1,40 @@
+/*
+	-----------------------------------------------
+	Variables
+	-----------------------------------------------
+*/
+
+// colors
+$color-text-main: #000000;
+// $color-hover-lightener: #333333;
+$color-links: #1EAEDB;
+$color-links-hover: #0FA0CE;
+$color-heading-links: #000000;
+$color-gray-light: #e1e1e1; // borders, <hr> elements
+// $color-gray-medium: #aaaaaa; // post meta
+// $color-gray-dark: #888888; // hover links for #aaaaaa
+
+// main font styles override theese 2 style in case you use another web font with [theme-root]/partials/webfonts.hbs
+$font-weight-normal: 400;
+$font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// fontawesome family name
+// $font-awesome: "FontAwesome";
+
+// navigation margnis/paddings
+// $nav-list-list-element-margin-right: 1.2rem;
+// $nav-list-link-padding-top-and-bottom: 1.6rem;
+
+// .container width
+$width-container-max: 700px;
+
+// margin for site sections
+// $margin-template-content: 2.25rem;
+
+// theme icons
+// $icon-home: "\f015";
+// $icon-page: "\f078";
+// $icon-post: "\f069";
+// $icon-tag: "\f02b";
+// $icon-author: "\f007";
+// $icon-header: "\f08d";
