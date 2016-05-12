@@ -13,10 +13,114 @@
 	Base
 	-----------------------------------------------
 */
-.base {
-  color: red;
+.nttld--button-plain {
+  border: none;
+  padding: 0 10px;
 }
 
+.nttld--button-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  height: auto;
+  color: inherit;
+  letter-spacing: normal;
+}
+
+/*
+	-----------------------------------------------
+	Blog Styles
+	-----------------------------------------------
+*/
+#nttld--main-wrapper {
+  /* @in default.hbs */
+}
+
+.nttld--site-navigation {
+  border-bottom: 1px solid #e1e1e1;
+}
+.nttld--site-navigation nav {
+  position: relative;
+}
+
+.nttld--nav-toggle {
+  float: left;
+  padding: 1.6rem 0;
+}
+
+.nttld--nav-list {
+  background-color: #ffffff;
+  list-style: none;
+  margin: 0;
+  position: relative;
+  clear: both;
+  border-top: 1px dotted #e1e1e1;
+  display: none;
+}
+.nttld--nav-list li {
+  display: block;
+  clear: both;
+  margin: 0;
+}
+.nttld--nav-list li:last-child {
+  margin-right: 0;
+}
+.nttld--nav-list li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  white-space: nowrap;
+  padding: 0.8rem 0;
+}
+
+.nttld--nav-current {
+  font-weight: bold;
+}
+
+/*
+	-----------------------------------------------
+	Media Queries (copy of Skeleton queries)
+	-----------------------------------------------
+*/
+@media (min-width: 550px) {
+  .nttld--nav-toggle {
+    display: none;
+  }
+
+  .nttld--nav-list {
+    border-top: none;
+    display: block;
+  }
+  .nttld--nav-list li {
+    float: left;
+    clear: none;
+  }
+  .nttld--nav-list li:last-child {
+    margin-right: 0;
+  }
+  .nttld--nav-list li a {
+    padding: 1.6rem 1.2rem;
+  }
+  .nttld--nav-list li a:hover {
+    color: #333333;
+    background-color: #fafafa;
+  }
+  .nttld--nav-list li .fa {
+    display: none;
+  }
+
+  .nttld--nav-current {
+    text-decoration: underline;
+    font-weight: normal;
+  }
+}
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
 /*
 	-----------------------------------------------
 	Overrides

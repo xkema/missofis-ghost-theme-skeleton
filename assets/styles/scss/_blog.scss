@@ -1,6 +1,6 @@
 /*
 	-----------------------------------------------
-	Blog
+	Blog Styles
 	-----------------------------------------------
 */
 
@@ -9,15 +9,73 @@
 // -----------------------------------------------
 // wrapper styles
 // -----------------------------------------------
-#main-wrapper { /* @in default.hbs */ }
+#nttld--main-wrapper { /* @in default.hbs */ }
 
 
 
 // -----------------------------------------------
-// 
+// Navigation
 // -----------------------------------------------
+.nttld--site-navigation {
 
+	border-bottom: 1px solid $color-gray-light;
 
+	nav {
+
+		position: relative;
+
+	}
+
+}
+
+.nttld--nav-toggle {
+
+	float: left;
+	padding: 1.6rem 0;
+
+}
+
+.nttld--nav-list {
+
+	background-color: #ffffff;
+	list-style: none;
+	margin: 0;
+	position: relative;
+	clear: both;
+	border-top: 1px dotted $color-gray-light;
+	display: none;
+
+	li {
+
+		display: block;
+		clear: both;
+		margin: 0;
+
+		&:last-child {
+
+			margin-right: 0;
+
+		}
+
+		a {
+
+			text-decoration: none;
+			color: inherit;
+			display: block;
+			white-space: nowrap;
+			padding: 0.8rem 0;
+
+		}
+
+	}
+
+}
+
+.nttld--nav-current {
+
+	font-weight: bold;
+
+}
 
 
 

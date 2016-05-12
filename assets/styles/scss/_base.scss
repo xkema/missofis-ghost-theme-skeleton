@@ -4,8 +4,31 @@
 	-----------------------------------------------
 */
 
-.base {
 
-	color: red; 
+
+// -----------------------------------------------
+// Buttons
+// -----------------------------------------------
+.nttld--button-plain {
+	
+	// borderless, limited pad button
+	border: none;
+	padding: 0 10px;
+	
+}
+
+.nttld--button-reset {
+	
+	// reset all button (navigation links)
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+	text-transform: inherit;
+	height: auto;
+	color: inherit;
+	letter-spacing: normal;
 
 }

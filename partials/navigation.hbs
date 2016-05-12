@@ -1,15 +1,16 @@
 {{! site navigation }}
-
-<div class="u-full-width site-navigation">
+<div class="u-full-width nttld--site-navigation">
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
 				<nav>
-					<button type="button" class="nav-toggle reset-btn"><i class="fa fa-fw fa-bars"></i>&nbsp;Menu</button>
-					<ul class="nav-list">
+					<button type="button" class="nttld--nav-toggle nttld--button-reset">
+						<i class="fa fa-fw fa-bars"></i> Menu
+					</button>
+					<ul class="nttld--nav-list">
 						{{#foreach navigation}}
-						<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
-							<a href="{{url}}" title="{{label}}">{{!-- <i class="fa fa-fw fa-angle-right"></i>&nbsp; --}}{{label}}</a>
+						<li class="nttld--nav-{{slug}}{{#if current}} nttld--nav-current{{/if}}" role="presentation">
+							<a href="{{url}}" title="{{label}}"><i class="fa fa-fw fa-angle-right"></i> {{label}}</a>
 						</li>
 						{{/foreach}}
 					</ul>

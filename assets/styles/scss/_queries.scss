@@ -1,0 +1,82 @@
+/*
+	-----------------------------------------------
+	Media Queries (copy of Skeleton queries)
+	-----------------------------------------------
+*/
+
+
+
+// -----------------------------------------------
+// Larger than mobile
+// -----------------------------------------------
+@media (min-width: 400px) {}
+
+
+
+// -----------------------------------------------
+// Larger than phablet
+// -----------------------------------------------
+@media (min-width: 550px) {
+
+	.nttld--nav-toggle {
+
+		display: none;
+
+	}
+
+	.nttld--nav-list {
+
+		border-top: none;
+		display: block;
+
+		li {
+
+			float: left;
+			clear: none;
+
+			&:last-child {
+
+				margin-right: 0;
+
+			}
+
+			a {
+
+				padding: 1.6rem 1.2rem;
+
+				&:hover {
+					
+					color: lighten( $color-text-main, 20% );
+					background-color: darken( #ffffff, 2% );
+
+				}
+
+			}
+
+			.fa {
+
+				display: none;
+
+			}
+
+		}
+
+	}
+
+	.nttld--nav-current {
+
+		text-decoration: underline;
+		font-weight: normal;
+	
+	}
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
