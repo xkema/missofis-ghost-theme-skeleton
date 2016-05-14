@@ -9,12 +9,8 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		{{! skeleton styles }}
-		<link rel="stylesheet" href="{{asset "styles/skeleton/normalize.css"}}">
-		<link rel="stylesheet" href="{{asset "styles/skeleton/skeleton.css"}}">
-		
-		{{! theme styles }}
-		<link rel="stylesheet" href="{{asset "styles/css/main.css"}}">
+		{{! theme styles (normalize + skeleton + theme) }}
+		<link rel="stylesheet" href="{{asset "css/screen.css"}}">
 
 		{{! theme fonts from google webfonts and fontawesome }}
 		{{> "webfonts"}}
@@ -46,7 +42,7 @@
 		{{ghost_foot}}
 		
 		{{! theme scripts }}
-		<script src="{{asset "scripts/main.js"}}"></script>
+		<script src="{{asset "js/main.js"}}"></script>
 
 		<!-- remove@production -->
 		<script src="//localhost:35729/livereload.js"></script>

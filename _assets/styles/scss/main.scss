@@ -4,17 +4,20 @@
  * @see https://github.com/xkema/missofis-skeleton-ghost-theme.git
  */
 
+// normalize
+@import '_normalize';
+
+// skeleton
+@import '_skeleton';
+
 // variables
 @import 'variables';
 
-// base styles
+// base styles & skeleton overrides
 @import 'base';
 
 // blog styles
-@import 'blog';
+// @import 'blog';
 
 // media queries
-@import 'queries';
-
-// plugin overrides
-@import 'overrides';
+// @import 'queries';

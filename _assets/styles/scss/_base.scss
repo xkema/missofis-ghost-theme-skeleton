@@ -1,0 +1,81 @@
+/*!
+	-----------------------------------------------
+	Base Styles & Skeleton Overrides
+	-----------------------------------------------
+*/
+
+
+// -----------------------------------------------
+// Base Styles
+// -----------------------------------------------
+html {
+
+	overflow-y: scroll;
+
+}
+
+body {
+
+	font-family: $font-family;
+	font-weight: $font-weight-normal;
+	color: $color-text-base;
+
+}
+
+a {
+
+	color: $color-links;
+
+	&:hover {
+
+		color: $color-links-hover;
+
+	}
+
+}
+
+hr {
+
+	border-color: $color-gray-light;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+	color: $color-text-base;
+
+	a {
+
+		color: inherit;
+		text-decoration: inherit;
+		font-weight: inherit;
+
+		&:hover {
+
+			color: lighten( $color-text-base, 10% );
+
+		}
+
+	}
+
+}
+
+img {
+
+	max-width: 100%;
+	height: auto;
+
+}
+
+
+
+// -----------------------------------------------
+// Skeleton Styles
+// -----------------------------------------------
+.container {
+
+	max-width: $width-container-max;
+
+}
+
+

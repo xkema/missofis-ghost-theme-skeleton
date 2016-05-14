@@ -4,6 +4,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
+	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 
 	// initialize grunt modules 
 	grunt.initConfig( {
@@ -13,16 +14,20 @@ module.exports = function( grunt ) {
 			dev: {
 				files: [ 
 					'*.hbs', 'partials/*.hbs',
-					'assets/styles/css/*.css', 'assets/styles/skeleton/*.css',
-					'assets/scripts/*.js',
+					'assets/css/*.css',
+					'assets/js/*.js'
 				],
 				options: {
 					livereload: true
 				}
 			},
 			sass: {
-				files: [ 'assets/styles/scss/*.scss' ],
+				files: [ '_assets/styles/scss/*.scss' ],
 				tasks: [ 'sass' ]
+			},
+			jscopy: {
+				files: [ '_assets/scripts/main.js' ],
+				tasks: [ 'uglify:dev' ]
 			},
 			configFiles: {
 				files: 'Gruntfile.js',
@@ -35,10 +40,12 @@ module.exports = function( grunt ) {
 		,sass: {
 			dev: {
 				options: {
-					style: 'expanded'
+					style: 'compressed', // nested, compact, compressed, expanded
+					noCache: true,
+					update: true
 				},
 				files: {
-					'assets/styles/css/main.css': 'assets/styles/scss/main.scss'
+					'assets/css/screen.css': '_assets/styles/scss/main.scss'
 				}
 			}
 		}
@@ -47,12 +54,25 @@ module.exports = function( grunt ) {
 			dev: {
 				files: [
 					{
-						expand: true,
-						cwd: 'bower_components/skeleton/css/',
-						src: [ '*.css' ],
-						dest: 'assets/styles/skeleton/',
-						filter: 'isFile',
-						flatten: true
+						src: 'bower_components/skeleton/css/normalize.css',
+						dest: '_assets/styles/scss/_normalize.scss'
+					},
+					{
+						src: 'bower_components/skeleton/css/skeleton.css',
+						dest: '_assets/styles/scss/_skeleton.scss'
+					}
+				]
+			}
+		}
+		// task :: @see https://www.npmjs.com/package/grunt-contrib-uglify#getting-started
+		,uglify: {
+			options: {
+				mangle: true
+			},
+			dev: {
+				files: [
+					{
+						'assets/js/main.js': [ '_assets/scripts/main.js' ]
 					}
 				]
 			}
@@ -60,8 +80,8 @@ module.exports = function( grunt ) {
 
 	} );
 
-	// register custom task for ***
-	grunt.registerTask( 'default', [ 'copy:dev', 'sass', 'watch' ] );
+	// register custom task for development
+	grunt.registerTask( 'default', [ 'copy:dev', 'uglify:dev', 'sass', 'watch' ] );
 
 	// register theme builder  task
 	//grunt.registerTask( 'build', [ 'jshint', 'uglify' ] );
