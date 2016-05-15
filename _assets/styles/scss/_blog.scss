@@ -21,11 +21,13 @@
 	border-bottom: 1px solid $color-gray-light;
 	position: relative;
 	padding: 2rem 0 1rem;
+	z-index: 900;
 
 	.nttld--blog-logo {
 
 		position: relative;
-		text-align: center;		
+		text-align: center;
+		margin-bottom: 1rem;
 
 		a {
 
@@ -44,11 +46,7 @@
 			display: block;
 			width: $width-blog-logo;
 			height: auto;
-			// in case of idiot user uploaded non-square sikko images, todo :: make it mixin if u're not also
-			position: relative;
-			top: 50%;
-			left: 50%;
-			transform: translate( -50%, -50% );
+			@include img-valigned;
 
 		}
 
@@ -109,6 +107,7 @@
 	padding: 1rem 1rem;
 	text-align: center;
 	color: $color-gray-medium;
+	z-index: 600;
 
 	& > div {
 
@@ -127,6 +126,66 @@
 			text-decoration: underline;
 			
 		}
+
+	}
+
+}
+
+
+
+// -----------------------------------------------
+// Blog Cover (home, post, page)
+// -----------------------------------------------
+.nttld--content-header {
+
+	z-index: 300;
+	margin-bottom: 2rem;
+
+}
+
+.nttld--cover-holder {
+
+	height: $heigth-cover-holder-small;
+	overflow: hidden;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+}
+
+.nttld--cover-info {
+
+	padding: 1rem 0;
+	background-color: $color-gray-thin;
+	font-size: inherit;
+
+	&.nttld--no-cover {
+
+		padding: 2.5rem 0;
+		font-size: 2.5rem;
+
+
+	}
+
+}
+
+.nttld--pagination-helper {
+
+	font-size: 1rem;
+
+}
+
+
+
+// -----------------------------------------------
+// Post
+// -----------------------------------------------
+.nttld--post-content {
+
+	img {
+
+		@include img-responsive;
 
 	}
 

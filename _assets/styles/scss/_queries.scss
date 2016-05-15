@@ -9,7 +9,11 @@
 // -----------------------------------------------
 // Larger than mobile
 // -----------------------------------------------
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+
+
+
+}
 
 
 
@@ -18,7 +22,7 @@
 // -----------------------------------------------
 @media (min-width: 550px) {
 
-
+	
 
 
 
@@ -115,10 +119,32 @@
 
 	}
 
+	.nttld--cover-holder {
+
+		height: $heigth-cover-holder-default;
+
+	}
+
 }
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+
+	.nttld--cover-holder {
+
+		height: $heigth-cover-holder-medium;
+
+	}
+
+}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+	.nttld--cover-holder {
+
+		height: $heigth-cover-holder-large;
+
+	}
+
+}

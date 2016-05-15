@@ -4,22 +4,23 @@
 {{#post}}
 
 {{! post featured header }}
-<header class="u-full-width post-featured-header">
+<header class="u-full-width nttld--content-header">
+
 	{{#if image}}
-	<div class="cover-holder">
-		<img src="{{image}}" alt="{{image}}">
-	</div>
-	{{else}}
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<span class="cover-holder-iconed">
-					<i class="fa fa-asterisk" title="{{title}}"></i>
-				</span>
+	<div class="nttld--cover-holder" style="background-image: url({{image}})">&nbsp;</div>
+	{{/if}}
+	<div class="nttld--cover-info {{^if image}}nttld--no-cover{{/if}}">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<span>
+						<i class="fa fa-asterisk" title="{{title}}"></i>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-	{{/if}}
+	
 </header>
 
 {{! single post content }}
@@ -33,16 +34,16 @@
 						<div class="post-meta meta-text">
 							<span><i class="fa fa-calendar"></i> <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time></span>
 							{{#if tags}}
-			                &nbsp;
-			                <span class="post-tags">
-			                	<i class="fa fa-tags"></i>
-			                	{{tags}}
-			                </span>
-			                {{/if}}
-			                </span>
-		               </div>
+							&nbsp;
+							<span class="post-tags">
+								<i class="fa fa-tags"></i>
+								{{tags}}
+							</span>
+							{{/if}}
+							</span>
+						</div>
 					</header>
-					<section class="post-content">
+					<section class="nttld--post-content">
 						{{content}}
 					</section>
 					<footer class="post-footer">
@@ -82,7 +83,7 @@
 					</footer>
 				</article>
 			</div>
-		</div>		
+		</div>
 	</div>
 </main>
 

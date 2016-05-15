@@ -1,10 +1,13 @@
 /*!
 	-----------------------------------------------
-	Variables
+	Variables & Mixins
 	-----------------------------------------------
 */
 
 
+// -----------------------------------------------
+// Variables
+// -----------------------------------------------
 
 // colors
 $color-text-base: #222222; 		// main text and header
@@ -24,7 +27,11 @@ $width-container-max: 700px;
 // blog logo size
 $width-blog-logo: 64px; // assuming user uploads a square logo image
 
-
+// cover sizes
+$heigth-cover-holder-small: 25vh;
+$heigth-cover-holder-default: 35vh;
+$heigth-cover-holder-medium: 45vh;
+$heigth-cover-holder-large: 55vh;
 
 
 
@@ -60,3 +67,26 @@ $font-weight-normal: 400;
 // $icon-header: "\f08d";
 
 */
+
+
+
+// -----------------------------------------------
+// Mixins
+// -----------------------------------------------
+@mixin img-responsive {
+
+	// responsive images
+	display: block;
+	width: 100%;
+
+}
+
+@mixin img-valigned {
+
+	// in case of idiot user uploaded non-square sikko images
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+
+}

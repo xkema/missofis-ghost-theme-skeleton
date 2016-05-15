@@ -1,38 +1,28 @@
 {{!< default}}
 
-{{! index page header }}
-{{^is "paged"}}
-<header class="u-full-width home-header">
+<header class="u-full-width nttld--content-header">
+
 	{{#if @blog.cover}}
-	<div class="cover-holder">
-		<img src="{{@blog.cover}}" alt="{{@blog.title}}">
-	</div>
-	{{else}}
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<span class="cover-holder-iconed">
-					<i class="fa fa-home" title="{{title}}"></i>
-				</span>
-			</div>
-		</div>
-	</div>
+	<div class="nttld--cover-holder" style="background-image: url({{@blog.cover}})">&nbsp;</div>
 	{{/if}}
-</header>
-{{else}}
-<header class="u-full-width home-header">
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<span class="cover-holder-iconed">
-					<i class="fa fa-home" title="{{title}}"></i>
-					<span class="pagination-helper-top home-helper">/ page {{pagination.page}} of {{pagination.pages}}</span>
-				</span>
+	<div class="nttld--cover-info {{^if @blog.cover}}nttld--no-cover{{/if}}">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<span>
+						<i class="fa fa-home" title="{{title}}"></i>
+						{{#is "paged"}}
+						<span class="nttld--pagination-helper">
+							<i class="fa fa-caret-right"></i> page {{pagination.page}} of {{pagination.pages}}
+						</span>
+						{{/is}}
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
+	
 </header>
-{{/is}}
 
 {{! index page content }}
 <main class="u-full-width template-content" role="main">
