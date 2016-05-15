@@ -17,16 +17,7 @@
 
 	document.addEventListener( 'DOMContentLoaded', function() {
 
-		var _navToggle = document.querySelector( '.nttld--nav-toggle' );
-		var _navList = document.querySelector( '.nttld--nav-list' );
-		_navToggle.addEventListener( 'click', function( e ) {
-			if( 'block' !== _navList.style.display ) {
-				_navList.style.display = 'block';
-			}
-			else {
-				_navList.style.display = 'none';
-			}
-		} );
+		// theme scripts
 		
 	} );
 

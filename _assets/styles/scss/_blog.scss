@@ -7,7 +7,7 @@
 
 
 // -----------------------------------------------
-// wrapper styles
+// Main Wrapper Styles
 // -----------------------------------------------
 #nttld--main-wrapper { /* @in default.hbs */ }
 
@@ -19,51 +19,70 @@
 .nttld--site-navigation {
 
 	border-bottom: 1px solid $color-gray-light;
+	position: relative;
+	padding: 2rem 0 1rem;
+
+	.nttld--blog-logo {
+
+		position: relative;
+		text-align: center;		
+
+		a {
+
+			background-color: #ffffff;
+			display: block;
+			width: $width-blog-logo;
+			height: $width-blog-logo;
+			border-radius: $width-blog-logo * 0.5;
+			overflow: hidden;
+			margin: 0 auto;
+
+		}
+
+		img {
+
+			display: block;
+			width: $width-blog-logo;
+			height: auto;
+			// in case of idiot user uploaded non-square sikko images, todo :: make it mixin if u're not also
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50% );
+
+		}
+
+	}
 
 	nav {
 
-		position: relative;
+		position: relative;		
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		text-align: center;
 
 	}
 
 }
 
-.nttld--nav-toggle {
+.nttld--nav-list { // <ul> elem
 
-	float: left;
-	padding: 1.6rem 0;
-
-}
-
-.nttld--nav-list {
-
-	background-color: #ffffff;
 	list-style: none;
 	margin: 0;
-	position: relative;
-	clear: both;
-	border-top: 1px dotted $color-gray-light;
-	display: none;
 
 	li {
 
-		display: block;
-		clear: both;
+		display: inline-block;
 		margin: 0;
-
-		&:last-child {
-
-			margin-right: 0;
-
-		}
 
 		a {
 
 			text-decoration: none;
 			color: inherit;
 			display: block;
+			float: left;
 			white-space: nowrap;
-			padding: 0.8rem 0;
+			padding: 0 1rem;
 
 		}
 
@@ -73,7 +92,8 @@
 
 .nttld--nav-current {
 
-	font-weight: bold;
+	background-color: $color-gray-thin;
+	border-radius: 10px;
 
 }
 
@@ -84,21 +104,18 @@
 // -----------------------------------------------
 .nttld--button-plain {
 	
-	/*
 	// borderless, limited pad button
 	border: none;
 	padding: 0 10px;
-	*/
 
 }
 
 .nttld--button-reset {
-	
-	/*
+
 	// reset all button (navigation links)
 	margin: 0;
-	padding: 0;
 	border: none;
+	padding: 0;
 	font-size: inherit;
 	line-height: inherit;
 	font-weight: inherit;
@@ -106,7 +123,6 @@
 	height: auto;
 	color: inherit;
 	letter-spacing: normal;
-	*/
 
 }
 

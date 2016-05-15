@@ -11,6 +11,7 @@ $color-text-base: #222222; 		// main text and header
 $color-links: #1EAEDB; 			// links
 $color-links-hover: #0FA0CE; 	// links hover
 $color-gray-light: #e1e1e1; 	// borders, <hr> elements
+$color-gray-thin: #f3f3f3; 		// active nav link
 
 // fonts
 $font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,7 +20,8 @@ $font-weight-normal: 400;
 // .container width
 $width-container-max: 700px;
 
-
+// blog logo size
+$width-blog-logo: 64px; // assuming user uploads a square logo image
 
 
 

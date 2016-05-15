@@ -1,1 +1,1 @@
-!function(a,b,c){b.addEventListener("DOMContentLoaded",function(){var a=b.querySelector(".nttld--nav-toggle"),c=b.querySelector(".nttld--nav-list");a.addEventListener("click",function(a){"block"!==c.style.display?c.style.display="block":c.style.display="none"})})}(window,document);
+!function(a,b,c){b.addEventListener("DOMContentLoaded",function(){})}(window,document);

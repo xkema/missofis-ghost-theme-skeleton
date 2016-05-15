@@ -1,16 +1,22 @@
 {{! site navigation }}
 <div class="u-full-width nttld--site-navigation">
+	<!-- blog logo -->
+	{{#if @blog.logo}}
+	<div class="nttld--blog-logo">
+		<a href="{{@blog.url}}">
+			<img src="{{@blog.logo}}" alt="Logo">
+		</a>
+	</div>
+	{{/if}}
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
-				<nav>
-					<button type="button" class="nttld--nav-toggle nttld--button-reset">
-						<i class="fa fa-fw fa-bars"></i> Menu
-					</button>
+				<!-- navigation -->
+				<nav>					
 					<ul class="nttld--nav-list">
 						{{#foreach navigation}}
-						<li class="nttld--nav-{{slug}}{{#if current}} nttld--nav-current{{/if}}" role="presentation">
-							<a href="{{url}}" title="{{label}}"><i class="fa fa-fw fa-angle-right"></i> {{label}}</a>
+						<li class="nttld--nav-{{slug}}" role="presentation">
+							<a href="{{url}}" title="{{label}}" class="{{#if current}} nttld--nav-current{{/if}}">{{label}}</a>
 						</li>
 						{{/foreach}}
 					</ul>
