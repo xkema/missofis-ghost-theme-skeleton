@@ -100,6 +100,41 @@
 
 
 // -----------------------------------------------
+// Footer
+// -----------------------------------------------
+.nttld--site-footer {
+
+	margin-top: 5rem;
+	font-size: 1.2rem;
+	padding: 1rem 1rem;
+	text-align: center;
+	color: $color-gray-medium;
+
+	& > div {
+
+		width: 100%;
+
+	}
+
+	a {
+
+		color: inherit;
+		font-size: inherit;
+		text-decoration: none;
+
+		&:hover {
+
+			text-decoration: underline;
+			
+		}
+
+	}
+
+}
+
+
+
+// -----------------------------------------------
 // Buttons
 // -----------------------------------------------
 .nttld--button-plain {

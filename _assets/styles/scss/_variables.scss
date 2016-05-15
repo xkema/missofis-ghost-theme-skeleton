@@ -10,6 +10,7 @@
 $color-text-base: #222222; 		// main text and header
 $color-links: #1EAEDB; 			// links
 $color-links-hover: #0FA0CE; 	// links hover
+$color-gray-medium: #aaaaaa; 	// post meta, footer links
 $color-gray-light: #e1e1e1; 	// borders, <hr> elements
 $color-gray-thin: #f3f3f3; 		// active nav link
 
@@ -33,7 +34,6 @@ $width-blog-logo: 64px; // assuming user uploads a square logo image
 // colors
 // $color-hover-lightener: #333333;
 $color-heading-links: #000000;
-// $color-gray-medium: #aaaaaa; // post meta
 // $color-gray-dark: #888888; // hover links for #aaaaaa
 
 // main font styles override theese 2 style in case you use another web font with [theme-root]/partials/webfonts.hbs
