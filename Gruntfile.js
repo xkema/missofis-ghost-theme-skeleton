@@ -55,13 +55,18 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						src: 'bower_components/skeleton/css/normalize.css',
-						dest: '_assets/styles/scss/_normalize.scss'
+						dest: '_assets/styles/scss/_normalize.scss',
 					},
 					{
 						src: 'bower_components/skeleton/css/skeleton.css',
 						dest: '_assets/styles/scss/_skeleton.scss'
 					}
-				]
+				],
+				options: {
+					process: function( content, srcpath ) {
+						return content.replace( /–/g, '-' );
+					}
+				}
 			}
 		}
 		// task :: @see https://www.npmjs.com/package/grunt-contrib-uglify#getting-started
