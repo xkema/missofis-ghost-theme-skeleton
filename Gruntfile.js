@@ -40,7 +40,7 @@ module.exports = function( grunt ) {
 		,sass: {
 			dev: {
 				options: {
-					style: 'compressed', // nested, compact, compressed, expanded
+					style: 'expanded', // nested, compact, compressed, expanded
 					noCache: true,
 					update: true
 				},

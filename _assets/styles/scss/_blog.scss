@@ -90,7 +90,7 @@
 
 .nttld--nav-current {
 
-	background-color: $color-gray-thin;
+	background-color: $color-theme-accent;
 	border-radius: 10px;
 
 }
@@ -157,7 +157,7 @@
 .nttld--cover-info {
 
 	padding: 1rem 0;
-	background-color: $color-gray-thin;
+	background-color: $color-theme-accent;
 	font-size: inherit;
 
 	&.nttld--no-cover {
@@ -183,9 +183,65 @@
 // -----------------------------------------------
 .nttld--post-content {
 
+	// post details
+	
 	img {
 
 		@include img-responsive;
+
+	}
+
+}
+
+
+
+// -----------------------------------------------
+// Loop
+// -----------------------------------------------
+.nttld--post-header {
+	
+
+
+}
+
+.nttld--post-title {
+	
+
+
+}
+
+.nttld--post-excerpt {
+	
+	a {
+
+		color: $color-gray-medium;
+
+	}
+
+}
+
+.nttld--post-meta {
+	
+	
+
+}
+
+.nttld--meta-text {
+
+	// meta texts for post, author, tag
+	
+	color: $color-gray-medium;
+
+	a {
+
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+
+			text-decoration: underline;
+
+		}
 
 	}
 

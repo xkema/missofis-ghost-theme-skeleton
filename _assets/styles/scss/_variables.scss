@@ -9,6 +9,10 @@
 // Variables
 // -----------------------------------------------
 
+// theme colors
+$color-theme-primary: #33C3F0; // skeleton blue
+$color-theme-accent: #f3f3f3;
+
 // colors
 $color-text-base: #222222; 		// main text and header
 $color-links: #1EAEDB; 			// links
@@ -19,6 +23,7 @@ $color-gray-thin: #f3f3f3; 		// active nav link
 
 // fonts
 $font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-icon: "FontAwesome";
 $font-weight-normal: 400;
 
 // .container width
@@ -33,6 +38,10 @@ $heigth-cover-holder-default: 35vh;
 $heigth-cover-holder-medium: 45vh;
 $heigth-cover-holder-large: 55vh;
 
+// theme hr icons
+$icon-post: "\f069";
+$icon-tag: "\f02b";
+$icon-author: "\f007";
 
 
 
@@ -47,9 +56,6 @@ $color-heading-links: #000000;
 $font-weight-normal: 400;
 
 
-// fontawesome family name
-// $font-awesome: "FontAwesome";
-
 // navigation margnis/paddings
 // $nav-list-list-element-margin-right: 1.2rem;
 // $nav-list-link-padding-top-and-bottom: 1.6rem;
@@ -61,9 +67,6 @@ $font-weight-normal: 400;
 // theme icons
 // $icon-home: "\f015";
 // $icon-page: "\f078";
-// $icon-post: "\f069";
-// $icon-tag: "\f02b";
-// $icon-author: "\f007";
 // $icon-header: "\f08d";
 
 */

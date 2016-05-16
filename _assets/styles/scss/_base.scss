@@ -34,12 +34,6 @@ a {
 
 }
 
-hr {
-
-	border-color: $color-gray-light;
-
-}
-
 h1, h2, h3, h4, h5, h6 {
 
 	color: $color-text-base;
@@ -60,6 +54,52 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
+
+// -----------------------------------------------
+// Horizontal Rules
+// -----------------------------------------------
+hr {
+
+	border-color: $color-gray-light;
+
+	&::after {
+
+		font-family: $font-icon;
+		content: $icon-post; // default icon is post icon
+		position: absolute;
+		left: 50%;
+		margin-left: -11px;
+		color: $color-gray-light;
+		background: #ffffff;
+		margin-top: -12px;
+		padding: 0px 4px;
+		border-radius: 50%;
+		font-size: 14px;
+
+	}
+
+	&.author {
+
+		&::after {
+
+			content: $icon-author;
+
+		}
+
+	}
+
+	&.tag {
+
+		&::after {
+
+			content: $icon-tag;
+
+		}
+
+	}
+	
+}
 
 
 // -----------------------------------------------
