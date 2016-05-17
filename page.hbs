@@ -3,35 +3,35 @@
 {{! page layout }}
 {{#post}}
 
-{{! post featured header }}
-<header class="u-full-width post-featured-header">
+{{! page featured header }}
+<header class="u-full-width nttld--content-header">
+
 	{{#if image}}
-	<div class="cover-holder">
-		<img src="{{image}}" alt="{{image}}">
-	</div>
-	{{else}}
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<span class="cover-holder-iconed">
-					<i class="fa fa-chevron-down" title="{{title}}"></i>
-				</span>
+	<div class="nttld--cover-holder" style="background-image: url({{image}})">&nbsp;</div>
+	{{/if}}<div class="nttld--cover-info {{^if image}}nttld--no-cover{{/if}}">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<span>
+						<i class="fa fa-chevron-down" title="{{title}}"></i>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-	{{/if}}
+
 </header>
 
 {{! page content }}
-<main class="u-full-width template-content" role="main">
+<main class="u-full-width" role="main">
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
 				<article class="{{post_class}}">
-					<header class="post-header">
-						<h1 class="post-title">{{{title}}}</h1>
+					<header class="nttld--post-header">
+						<h1 class="nttld--post-title">{{{title}}}</h1>
 					</header>
-					<section class="post-content">
+					<section class="nttld--post-content">
 						{{content}}
 					</section>
 				</article>
