@@ -1,63 +1,57 @@
 {{!< default}}
 
-{{! tag header }}
-<div class="u-full-width">
-	{{^is "paged"}}
+{{! tag layout }}
+<header class="u-full-width nttld--content-header">
+	
+	{{! tag header }}
 	{{#if tag.image}}
-	<div class="u-full-width">
-		<div class="cover-holder">
-			<img src="{{tag.image}}" alt="{{tag.image}}">
-		</div>
-	</div>
+	<div class="nttld--cover-holder" style="background-image: url({{tag.image}})">&nbsp;</div>
 	{{/if}}
-	{{/is}}
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<section class="tag-info info-box">
-					{{#tag}}
-					<div class="info-box-type-icon">
-						<i class="fa fa-tag fa-5x" title="{{name}}"></i>
+	<div class="nttld--cover-info {{^if tag.image}}nttld--no-cover{{/if}}">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<span>
+						<i class="fa fa-tag" title="{{tag.title}}"></i>
+						{{#is "paged"}}
+						<span class="nttld--pagination-helper">
+							<i class="fa fa-caret-right"></i> page {{pagination.page}} of {{pagination.pages}}
+						</span>
+						{{/is}}
+					</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns">
+					<div class="nttld--tag-meta nttld--meta-text">
+						{{#if tag.image}}
+						<h6 class="u-cf"><span class="chip">{{tag.name}}</span></h6>
+						{{else}}
+						<h5 class="u-cf"><span class="chip">{{tag.name}}</span></h5>
+						{{/if}}
+						<p class="nttld--tag-meta-description">
+							<small>{{tag.description}}</small>
+						</p>
+						<p>
+							<small><i class="fa fa-link"></i>&nbsp;&nbsp;<a href="{{tag.url}}">{{tag.name}}</a></small>
+						</p>
+						<p>
+							<small><span><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;{{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}</span></small>
+						</p>
 					</div>
-					<h3>{{name}}</h3>
-					<span class="tag-meta meta-text">
-						<i class="fa fa-link"></i>&nbsp;<a href="{{url}}">{{name}}</a>
-					</span>
-					{{#if description}}
-					<p>{{description}}</p>
-					{{/if}}
-					{{/tag}}
-					<span class="tag-meta meta-text">
-						<i class="fa fa-file-text-o"></i> {{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}
-					</span>
-				</section>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	
+</header>
 
-<hr class="tag">
 
-{{! pagination helper tag }}
-{{#is "paged"}}
-<div class="u-full-width">
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<span class="pagination-helper-top u-pull-right">
-					<i class="fa fa-tag"></i> <small>/ page {{pagination.page}} of {{pagination.pages}}</small>
-				</span>
-			</div>
-		</div>
-	</div>
-</div>
-{{/is}}
-
-{{! index page content }}
+{{! tag page content }}
 <main class="u-full-width" role="main">
 	<div class="container">
 		
-		{{! loop over blog posts (rows comes from the loop) }}
+		{{! loop over tag posts (.rows comes from the loop) }}
 		{{> "loop" }}
 		
 	</div>

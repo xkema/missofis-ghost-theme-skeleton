@@ -216,9 +216,17 @@
 
 .nttld--post-excerpt {
 	
-	a {
+	.nttld--read-more {
 
 		color: $color-gray-medium;
+		display: inline-block;
+		padding: 0 4px;
+
+		&:hover {
+
+			padding-left: 5px;
+
+		}
 
 	}
 
@@ -322,6 +330,49 @@
 }
 
 .nttld--author-meta {}
+
+
+
+// -----------------------------------------------
+// Tag
+// -----------------------------------------------
+.nttld--tag-meta {
+
+	font-size: 1.5rem;
+
+	.chip {
+
+		float: left;
+		background-color: $color-gray-light;
+		border-radius: 32px;
+		padding: 1rem 2rem;
+		line-height: 1;
+
+	}
+
+	h5,
+	h6 {
+
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+		
+	}
+
+	p {
+
+		margin-bottom: 0.5rem;
+		line-height: 1;
+		clear: both;
+
+		&.nttld--tag-meta-description {
+			
+			margin-bottom: 1rem;
+
+		}
+
+	}
+
+}
 
 
 
