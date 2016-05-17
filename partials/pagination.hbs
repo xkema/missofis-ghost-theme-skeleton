@@ -1,13 +1,17 @@
 {{! pagination }}
 
-<div class="row pagination" role="navigation">
+<div class="row nttld--pagination" role="navigation">
 	<div class="twelve columns">
 		{{#if prev}}
-        <a class="button pagination-prev" href="{{page_url prev}}"><i class="fa fa-arrow-left"></i><span class="visible-above-750">&nbsp;&nbsp;Newer Posts</span></a>
+        <a class="button nttld--pagination-prev" href="{{page_url prev}}" title="Newer Posts">
+        	<i class="fa fa-arrow-left"></i><span class="nttld--show-after-750">&nbsp;&nbsp;Newer Posts</span>
+        </a>
 		{{/if}}
-		<div class="pagination-indicator"><span class="visible-above-750">page</span> {{page}} of {{pages}}</div>
+		<div class="nttld--pagination-indicator"><span class="nttld--show-after-750">page</span> {{page}} of {{pages}}</div>
 		{{#if next}}
-        <a class="button pagination-next" href="{{page_url next}}"><span class="visible-above-750">Older Posts&nbsp;&nbsp;</span><i class="fa fa-arrow-right"></i></a>
+        <a class="button nttld--pagination-next" href="{{page_url next}}" title="Older Posts">
+        	<span class="nttld--show-after-750">Older Posts&nbsp;&nbsp;</span><i class="fa fa-arrow-right"></i>
+        </a>
 		{{/if}}
 	</div>
 </div>

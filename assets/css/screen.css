@@ -1143,7 +1143,7 @@ hr.tag::after {
 
 .nttld--nav-current {
   background-color: #f3f3f3;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .nttld--site-footer {
@@ -1214,6 +1214,30 @@ hr.tag::after {
   text-decoration: underline;
 }
 
+.nttld--pagination {
+  position: relative;
+  text-align: center;
+}
+.nttld--pagination a {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.nttld--pagination-prev {
+  left: 0;
+}
+
+.nttld--pagination-next {
+  right: 0;
+}
+
+.nttld--pagination-indicator {
+  height: 38px;
+  line-height: 38px;
+  color: #aaaaaa;
+}
+
 .nttld--button-plain {
   border: none;
   padding: 0 10px;
@@ -1230,6 +1254,10 @@ hr.tag::after {
   height: auto;
   color: inherit;
   letter-spacing: normal;
+}
+
+.nttld--show-after-750 {
+  display: none;
 }
 
 /*!
@@ -1259,6 +1287,10 @@ hr.tag::after {
 
   .nttld--cover-holder {
     height: 35vh;
+  }
+
+  .nttld--show-after-750 {
+    display: inline-block;
   }
 }
 /* Larger than desktop */

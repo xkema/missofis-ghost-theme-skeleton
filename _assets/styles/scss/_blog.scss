@@ -91,7 +91,7 @@
 .nttld--nav-current {
 
 	background-color: $color-theme-accent;
-	border-radius: 10px;
+	border-radius: 12px;
 
 }
 
@@ -250,6 +250,46 @@
 
 
 // -----------------------------------------------
+// Pagination
+// -----------------------------------------------
+.nttld--pagination {
+
+	position: relative;
+	text-align: center;
+
+	a {
+
+		display: block;
+		position: absolute;
+		top: 0;
+
+	}
+
+}
+
+.nttld--pagination-prev {
+
+	left: 0;
+
+}
+
+.nttld--pagination-next {
+
+	right: 0;
+	
+}
+
+.nttld--pagination-indicator {
+
+	height: 38px; // same as skeleton buttons
+	line-height: 38px;
+	color: $color-gray-medium;
+
+}
+
+
+
+// -----------------------------------------------
 // Buttons
 // -----------------------------------------------
 .nttld--button-plain {
@@ -278,4 +318,12 @@
 
 
 
+// -----------------------------------------------
+// Vİsibility COntrollers
+// -----------------------------------------------
+.nttld--show-after-750 {
+
+	display: none;
+
+}
 
