@@ -17,6 +17,7 @@ $color-theme-accent: #f3f3f3;
 $color-text-base: #222222; 		// main text and header
 $color-links: #1EAEDB; 			// links
 $color-links-hover: #0FA0CE; 	// links hover
+$color-gray-dark: #888888; 		// post share links
 $color-gray-medium: #aaaaaa; 	// post meta, footer links
 $color-gray-light: #e1e1e1; 	// borders, <hr> elements
 $color-gray-thin: #f3f3f3; 		// active nav link
@@ -24,7 +25,9 @@ $color-gray-thin: #f3f3f3; 		// active nav link
 // fonts
 $font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-icon: "FontAwesome";
-$font-weight-normal: 400;
+$font-weight-normal: 400; // main font styles override these 3 styles (*-normal, *-thin, *-dark) in case you use another web font with [theme-root]/partials/webfonts.hbs
+$font-weight-thin: 300;
+$font-weight-dark: 600;
 
 // .container width
 $width-container-max: 700px;
@@ -43,17 +46,14 @@ $icon-post: "\f069";
 $icon-tag: "\f02b";
 $icon-author: "\f007";
 
-
+// blog post
+$width-author-image-post-footer: 100px;
 
 /*
 
 // colors
 // $color-hover-lightener: #333333;
 $color-heading-links: #000000;
-// $color-gray-dark: #888888; // hover links for #aaaaaa
-
-// main font styles override theese 2 style in case you use another web font with [theme-root]/partials/webfonts.hbs
-$font-weight-normal: 400;
 
 
 // navigation margnis/paddings
@@ -91,5 +91,11 @@ $font-weight-normal: 400;
 	top: 50%;
 	left: 50%;
 	transform: translate( -50%, -50% );
+
+}
+
+@mixin box-shadow-light {
+
+	box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.15 );
 
 }

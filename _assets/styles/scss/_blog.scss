@@ -179,7 +179,7 @@
 
 
 // -----------------------------------------------
-// Post
+// Post & Loop
 // -----------------------------------------------
 .nttld--post-content {
 
@@ -193,22 +193,26 @@
 
 }
 
+.nttld--post-header {}
 
+.nttld--meta-header {
 
-// -----------------------------------------------
-// Loop
-// -----------------------------------------------
-.nttld--post-header {
+	// post content title
+	.nttld--post-title {
+
+		margin-bottom: 0; // reset margin to pull meta to up, move bottom margin to meta
+
+	}
 	
+	.nttld--post-meta {
 
+		margin-bottom: 2rem; // skeleton heading margin
+
+	}
 
 }
 
-.nttld--post-title {
-	
-
-
-}
+.nttld--post-title {}
 
 .nttld--post-excerpt {
 	
@@ -220,11 +224,7 @@
 
 }
 
-.nttld--post-meta {
-	
-	
-
-}
+.nttld--post-meta {}
 
 .nttld--meta-text {
 
@@ -246,6 +246,82 @@
 	}
 
 }
+
+.nttld--post-footer {}
+
+.nttld--post-share {
+
+	text-align: center;
+	padding: 2.5rem 0;
+
+	h5 {
+
+		font-weight: $font-weight-dark;
+
+	}
+
+}
+
+.nttld--post-share-links {
+
+	a {
+
+		text-decoration: none;
+		color: $color-gray-medium;
+		display: inline-block;
+		margin: 0 2px;
+
+		&:hover {
+
+			color: $color-gray-dark;
+
+		}
+
+	}
+
+}
+
+.nttld--post-author {
+
+	h5 {
+
+		font-weight: $font-weight-dark;
+
+	}
+
+}
+
+.nttld--info-box {
+
+	text-align: center;
+	// border: 1px dashed $color-gray-light;
+	padding: 2.5rem;
+
+	.button {
+
+		margin-bottom: 0;
+
+	}
+
+}
+
+.nttld--post-author-image {
+
+	color: $color-gray-medium;
+
+	img {
+
+		width: $width-author-image-post-footer;
+		display: inline-block;
+		border: 5px solid #ffffff;
+		@include box-shadow-light;
+		border-radius: 50%;
+
+	}
+
+}
+
+.nttld--author-meta {}
 
 
 

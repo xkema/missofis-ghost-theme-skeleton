@@ -24,18 +24,18 @@
 </header>
 
 {{! single post content }}
-<main class="u-full-width template-content" role="main">
+<main class="u-full-width" role="main">
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
 				<article class="{{post_class}}">
-					<header class="post-header meta-header">
-						<h1 class="post-title">{{{title}}}</h1>
-						<div class="post-meta meta-text">
+					<header class="nttld--post-header nttld--meta-header">
+						<h1 class="nttld--post-title">{{{title}}}</h1>
+						<div class="nttld--post-meta nttld--meta-text">
 							<span><i class="fa fa-calendar"></i> <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time></span>
 							{{#if tags}}
 							&nbsp;
-							<span class="post-tags">
+							<span class="nttld--post-tags">
 								<i class="fa fa-tags"></i>
 								{{tags}}
 							</span>
@@ -46,18 +46,18 @@
 					<section class="nttld--post-content">
 						{{content}}
 					</section>
-					<footer class="post-footer">
-						<div class="post-share">
-							<hr>
+					<footer class="nttld--post-footer">
+						<hr>
+						<div class="nttld--post-share">
 							<h5>Share this post</h5>
-							<div class="post-share-links">
+							<div class="nttld--post-share-links">
 								{{> "share" }}
 							</div>
-							<hr>
 						</div>
-						<div class="post-author info-box">
+						<hr>
+						<div class="nttld--post-author nttld--info-box">
 							{{#author}}
-							<div class="post-author-image">
+							<div class="nttld--post-author-image">
 								{{#if image}}
 								<img src="{{image}}" alt="{{name}}" class="u-full-width" title="{{name}}">
 								{{else}}
@@ -65,7 +65,7 @@
 								{{/if}}
 							</div>
 							<h5>{{name}}</h5>
-							<span class="author-meta meta-text">
+							<span class="nttld--author-meta nttld--meta-text">
 								{{#if location}}
 								<i class="fa fa-map-marker"></i> {{location}} &nbsp;
 								{{/if}}
@@ -75,7 +75,7 @@
 								{{/if}}
 							</span>
 							{{#if bio}}
-							<p>{{bio}}</p>
+							<p><small>{{bio}}</small></p>
 							{{/if}}
 							<a href="{{url}}" title="See all posts from {{name}}" class="button">Author's Page</a>
 							{{/author}}

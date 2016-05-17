@@ -998,10 +998,6 @@ there.
 // colors
 // $color-hover-lightener: #333333;
 $color-heading-links: #000000;
-// $color-gray-dark: #888888; // hover links for #aaaaaa
-
-// main font styles override theese 2 style in case you use another web font with [theme-root]/partials/webfonts.hbs
-$font-weight-normal: 400;
 
 
 // navigation margnis/paddings
@@ -1199,6 +1195,13 @@ hr.tag::after {
   width: 100%;
 }
 
+.nttld--meta-header .nttld--post-title {
+  margin-bottom: 0;
+}
+.nttld--meta-header .nttld--post-meta {
+  margin-bottom: 2rem;
+}
+
 .nttld--post-excerpt a {
   color: #aaaaaa;
 }
@@ -1212,6 +1215,47 @@ hr.tag::after {
 }
 .nttld--meta-text a:hover {
   text-decoration: underline;
+}
+
+.nttld--post-share {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+.nttld--post-share h5 {
+  font-weight: 600;
+}
+
+.nttld--post-share-links a {
+  text-decoration: none;
+  color: #aaaaaa;
+  display: inline-block;
+  margin: 0 2px;
+}
+.nttld--post-share-links a:hover {
+  color: #888888;
+}
+
+.nttld--post-author h5 {
+  font-weight: 600;
+}
+
+.nttld--info-box {
+  text-align: center;
+  padding: 2.5rem;
+}
+.nttld--info-box .button {
+  margin-bottom: 0;
+}
+
+.nttld--post-author-image {
+  color: #aaaaaa;
+}
+.nttld--post-author-image img {
+  width: 100px;
+  display: inline-block;
+  border: 5px solid #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
 }
 
 .nttld--pagination {
