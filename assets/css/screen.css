@@ -1048,6 +1048,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color: #3c3c3c;
 }
 
+p.nttld--skip-margin {
+  margin-bottom: 0;
+}
+
 hr {
   border-color: #e1e1e1;
 }
@@ -1145,11 +1149,13 @@ hr.tag::after {
   float: left;
   white-space: nowrap;
   padding: 0 1rem;
+  border: 1px solid transparent;
+  box-sizing: border-boX;
 }
-
-.nttld--nav-current {
-  background-color: #f3f3f3;
+.nttld--nav-list li a.nttld--nav-current {
+  background-color: #f9f9f9;
   border-radius: 12px;
+  border: 1px solid #f4f4f4;
 }
 
 .nttld--site-footer {
@@ -1188,7 +1194,7 @@ hr.tag::after {
 
 .nttld--cover-info {
   padding: 1rem 0;
-  background-color: #f3f3f3;
+  background-color: #f9f9f9;
   font-size: inherit;
 }
 .nttld--cover-info.nttld--no-cover {

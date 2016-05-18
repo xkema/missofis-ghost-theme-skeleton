@@ -81,6 +81,16 @@
 			float: left;
 			white-space: nowrap;
 			padding: 0 1rem;
+			border: 1px solid transparent; // to fix nav-current border addition flickering
+			box-sizing: border-boX;
+
+			&.nttld--nav-current {
+
+				background-color: $color-theme-accent;
+				border-radius: 12px;
+				border: 1px solid darken( $color-theme-accent, 2% );
+
+			}
 
 		}
 
@@ -88,12 +98,6 @@
 
 }
 
-.nttld--nav-current {
-
-	background-color: $color-theme-accent;
-	border-radius: 12px;
-
-}
 
 
 

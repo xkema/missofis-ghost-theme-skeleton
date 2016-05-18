@@ -1,63 +1,70 @@
 {{!< default}}
 
-<div class="u-full-width">
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<section class="author-info info-box">
+{{! author layout }}
+<header class="u-full-width nttld--content-header">
+	
+	
+	<div class="nttld--cover-info centered {{^if author.image}}nttld--no-cover{{/if}}">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
 					{{#author}}
-					<div class="post-author-image">
-						{{#if image}}
-						<img src="{{image}}" alt="{{name}}" class="u-full-width" title="{{name}}">
-						{{else}}
-						<i class="fa fa-user fa-5x" title="{{name}}"></i>
+					<div class="nttld--post-author nttld--info-box">
+						<div class="nttld--post-author-image">
+							{{#if image}}
+							<img src="{{image}}" alt="{{name}}" class="u-full-width" title="{{name}}">
+							{{else}}
+							<i class="fa fa-user fa-5x" title="{{name}}"></i>
+							{{/if}}
+						</div>
+						<h5>{{name}}</h5>
+						<span class="nttld--author-meta nttld--meta-text">
+							{{#if location}}
+							<i class="fa fa-map-marker"></i> {{location}} &nbsp;
+							{{/if}}
+							<br>
+							{{#if website}}
+							<i class="fa fa-link"></i> <a href="{{website}}" target="_blank">{{website}}</a>
+							{{/if}}
+						</span>
+						{{#if bio}}
+						<p class="nttld--skip-margin"><small>{{bio}}</small></p>
 						{{/if}}
 					</div>
-					<h3>{{name}}</h3>
-					<span class="author-meta meta-text">
-						{{#if location}}
-						<i class="fa fa-map-marker"></i> {{location}} &nbsp;
-						{{/if}}
-						<br>
-						{{#if website}}
-						<i class="fa fa-link"></i>&nbsp;<a href="{{website}}" target="_blank">{{website}}</a>
-						{{/if}}
+					<span>
+						<i class="fa fa-user" title="{{author.name}}"></i>
 					</span>
-					{{#if bio}}
-					<p>{{bio}}</p>
-					{{/if}}
 					{{/author}}
-					<span class="author-meta meta-text">
-						<i class="fa fa-file-text-o"></i> {{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}
+					<span>					
+						{{#is "paged"}}
+						<span class="nttld--pagination-helper">
+							<i class="fa fa-caret-right"></i> page {{pagination.page}} of {{pagination.pages}}
+						</span>
+						{{/is}}
 					</span>
-				</section>
+				</div>
+			</div>
+			<hr class="quiet engraved">
+			<div class="row">
+				<div class="twelve columns">
+					<div class="nttld--tag-meta nttld--meta-text">						
+						<p>
+							<small><span><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;{{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}</span></small>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	
+</header>
 
-<hr class="author">
 
-{{! pagination helper author }}
-{{#is "paged"}}
-<div class="u-full-width">
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<span class="pagination-helper-top u-pull-right">
-					<i class="fa fa-user"></i> <small>/ page {{pagination.page}} of {{pagination.pages}}</small>
-				</span>
-			</div>
-		</div>
-	</div>
-</div>
-{{/is}}
-
-{{! index page content }}
-<main class="u-full-width template-content" role="main">
+{{! author page content }}
+<main class="u-full-width" role="main">
 	<div class="container">
 		
-		{{! loop over blog posts (rows comes from the loop) }}
+		{{! loop over author's posts (.rows comes from the loop) }}
 		{{> "loop" }}
 		
 	</div>
