@@ -63,19 +63,47 @@ hr {
 
 	border-color: $color-gray-light;
 
-	&::after {
+	&.quiet {
 
-		font-family: $font-icon;
-		content: $icon-post; // default icon is post icon
-		position: absolute;
-		left: 50%;
-		margin-left: -11px;
-		color: $color-gray-light;
-		background: #ffffff;
-		margin-top: -12px;
-		padding: 0px 4px;
-		border-radius: 50%;
-		font-size: 14px;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+
+	}
+
+	&.engraved {
+
+		border-bottom: 1px solid #ffffff;
+
+	}
+	
+	&.post,
+	&.author
+	&.tag {
+
+		&::after {
+
+			font-family: $font-icon;
+			position: absolute;
+			left: 50%;
+			margin-left: -11px;
+			color: $color-gray-light;
+			background: #ffffff;
+			margin-top: -12px;
+			padding: 0px 4px;
+			border-radius: 50%;
+			font-size: 14px;
+
+		}
+
+	}
+
+	&.post {
+
+		&::after {
+
+			content: $icon-post;
+
+		}
 
 	}
 

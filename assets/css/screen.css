@@ -1051,9 +1051,16 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 hr {
   border-color: #e1e1e1;
 }
-hr::after {
+hr.quiet {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+hr.engraved {
+  border-bottom: 1px solid #ffffff;
+}
+hr.post::after, hr.author
+hr.tag::after {
   font-family: "FontAwesome";
-  content: "";
   position: absolute;
   left: 50%;
   margin-left: -11px;
@@ -1063,6 +1070,9 @@ hr::after {
   padding: 0px 4px;
   border-radius: 50%;
   font-size: 14px;
+}
+hr.post::after {
+  content: "";
 }
 hr.author::after {
   content: "";
@@ -1185,6 +1195,9 @@ hr.tag::after {
   padding: 2.5rem 0;
   font-size: 2.5rem;
 }
+.nttld--cover-info.centered {
+  text-align: center;
+}
 
 .nttld--pagination-helper {
   font-size: 1rem;
@@ -1267,7 +1280,7 @@ hr.tag::after {
   font-size: 1.5rem;
 }
 .nttld--tag-meta .chip {
-  float: left;
+  display: inline-block;
   background-color: #e1e1e1;
   border-radius: 32px;
   padding: 1rem 2rem;
@@ -1275,6 +1288,7 @@ hr.tag::after {
 }
 .nttld--tag-meta h5,
 .nttld--tag-meta h6 {
+  width: 100%;
   margin-bottom: 1rem;
   margin-top: 1rem;
 }

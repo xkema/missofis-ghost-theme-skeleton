@@ -168,6 +168,12 @@
 
 	}
 
+	&.centered {
+
+		text-align: center;
+
+	}
+
 }
 
 .nttld--pagination-helper {
@@ -342,7 +348,7 @@
 
 	.chip {
 
-		float: left;
+		display: inline-block;
 		background-color: $color-gray-light;
 		border-radius: 32px;
 		padding: 1rem 2rem;
@@ -353,6 +359,7 @@
 	h5,
 	h6 {
 
+		width: 100%;
 		margin-bottom: 1rem;
 		margin-top: 1rem;
 		

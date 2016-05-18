@@ -7,7 +7,7 @@
 	{{#if tag.image}}
 	<div class="nttld--cover-holder" style="background-image: url({{tag.image}})">&nbsp;</div>
 	{{/if}}
-	<div class="nttld--cover-info {{^if tag.image}}nttld--no-cover{{/if}}">
+	<div class="nttld--cover-info centered {{^if tag.image}}nttld--no-cover{{/if}}">
 		<div class="container">
 			<div class="row">
 				<div class="twelve columns">
@@ -21,6 +21,7 @@
 					</span>
 				</div>
 			</div>
+			<hr class="quiet engraved">
 			<div class="row">
 				<div class="twelve columns">
 					<div class="nttld--tag-meta nttld--meta-text">
@@ -29,9 +30,11 @@
 						{{else}}
 						<h5 class="u-cf"><span class="chip">{{tag.name}}</span></h5>
 						{{/if}}
+						{{#if tag.description}}
 						<p class="nttld--tag-meta-description">
 							<small>{{tag.description}}</small>
 						</p>
+						{{/if}}
 						<p>
 							<small><i class="fa fa-link"></i>&nbsp;&nbsp;<a href="{{tag.url}}">{{tag.name}}</a></small>
 						</p>
